@@ -1,0 +1,19 @@
+@import "../../../app/mixin.scss";
+
+.IncentivesWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1;
+    padding-bottom: 40px;
+
+
+    @include md {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+
+    @include lg {
+        padding-top: 0px;
+    }
+}

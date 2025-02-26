@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eddyv3
+  namespace: eddyv3-dev
+  labels:
+    app: eddyv3
+spec:
+  selector:
+    matchLabels:
+      app: eddyv3
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: eddyv3
+    spec:
+      containers:
+      - name: eddyv3
+        image: 975050307963.dkr.ecr.us-west-2.amazonaws.com/eddyv3:dev-latest
+        resources:
+          requests:
+            cpu: 512m
+            memory: 1024Mi
+          limits:
+            cpu: 1024m
+            memory: 2048Mi
+        env:
+        - name: SENTRY_AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: eddyv3-secrets
+              key: SENTRY_AUTH_TOKEN              
+        ports:
+        - containerPort: 3000
+          name: http

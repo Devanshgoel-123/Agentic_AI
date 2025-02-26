@@ -1,0 +1,38 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: eddyv3
+  namespace: eddyv3-mainnet
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: eddyv3
+  minReplicas: 2
+  maxReplicas: 20
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 50
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 0  # No waiting period before scaling up
+      policies:
+      - type: Percent
+        value: 100  # Double the number of replicas on each scale-up
+        periodSeconds: 15  # Can scale up every 15 seconds
+    scaleDown:
+      stabilizationWindowSeconds: 60  # Minimum wait before scaling down
+      policies:
+      - type: Percent
+        value: 50  # Reduce replicas by up to 50% on each scale-down
+        periodSeconds: 30  # Can scale down every 30 seconds   

@@ -1,0 +1,17 @@
+@import "../mixin.scss";
+
+.DustAggregatorWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    @include md{
+        margin-top: 80px;
+    }
+    @include lg{
+        margin-top: 45px;
+    }
+    @include xl{
+        margin-top: 50px;
+    }
+}

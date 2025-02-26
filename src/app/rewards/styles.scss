@@ -1,0 +1,20 @@
+@import "../../app/mixin.scss";
+
+.RewardsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1 1;
+    padding-bottom: 40px;
+    overflow: auto;
+    @include md {
+        padding-top: 50px;
+    }
+
+    @include lg {
+        padding-top: 50px;
+    }
+}
+.RewardsWrapper::-webkit-scrollbar{
+    display: none;
+}
