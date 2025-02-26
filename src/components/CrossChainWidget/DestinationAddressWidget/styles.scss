@@ -1,0 +1,143 @@
+@import "../../../app/mixin.scss";
+
+.DestinationAddressContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    width: 100%;
+    background: #101010;
+    border: 1px solid #1E1E1E;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 8px;
+    position: relative;
+
+    @include md {}
+
+    @include lg {
+        padding: 10px;
+    }
+
+    @include xl {
+        padding: 14px;
+    }
+
+    @include xxl {
+        padding: 14px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+
+    .ContainerLabel {
+        position: absolute;
+        top: -12px;
+        left: 20px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        color: var(--text-medium-grey);
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+        @include md {}
+
+        @include lg {
+            font-size: 8px;
+            top: -6px;
+            left: 20px;
+        }
+
+        @include xl {
+            font-size: 10px;
+            top: -12px;
+            left: 20px;
+        }
+
+        @include xxl {
+            font-size: 10px;
+            top: -8px;
+            left: 20px;
+        }
+    }
+
+    .DestinationAddress-Input {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        outline: none;
+        border: none;
+        width: 100%;
+        background-color: var(--paper-black-dark);
+        color: #CFCFCF;
+
+        @include md {}
+
+        @include lg {
+            font-size: 10px;
+        }
+
+        @include xl {
+            font-size: 14px;
+        }
+
+        @include xxl {
+            font-size: 16px;
+        }
+
+
+        &::placeholder {
+            color: var(--text-medium-grey);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .StatusContainer {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 5px 10px;
+        height: 100%;
+        background: #101010;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-left: 1px solid #1E1E1E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+
+        @include md {}
+
+        @include lg {
+            font-size: 10px;
+        }
+
+        @include xl {
+            font-size: 14px;
+        }
+
+        @include xxl {
+            font-size: 16px;
+        }
+
+        .Status {
+            color: var(--app-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}

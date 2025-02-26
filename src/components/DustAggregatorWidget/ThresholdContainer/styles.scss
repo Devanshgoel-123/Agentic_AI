@@ -1,0 +1,64 @@
+@import "../../../app/mixin.scss";
+
+.TokenThresholdContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include lg{
+        margin-top: -15px;
+    }
+    @include xl{
+        margin-top: 0;
+    }
+    .ContainerLabelThreshold{
+        position:relative;
+        top: 6px;
+        left: 15px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        color: #909090;
+        @include lg{
+            font-size: 11px;
+        }
+        @include xl{
+            font-size: 12px;
+        }
+    }
+    .InputBox{
+         border: 2px solid var(--border-color);
+         border-radius: 8px;
+         background: transparent;
+         display: flex;
+         color: #CFCFCF;
+         flex-direction: row;
+         div{
+            display: flex;
+            width: 15%;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .usdText{
+            font-size: 16px;
+            @include md{
+                font-size: 14px;
+            }
+            @include lg{
+                font-size: 14px;
+            }
+            @include xl{
+                font-size: 16px;
+            }
+            font-family: "Manropemedium";
+        }
+    }
+    .Threshold-Input{
+        padding: 12px;
+        width: 80%;
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        
+    }
+}

@@ -1,0 +1,206 @@
+@import "../../../app/mixin.scss";
+
+.RouteDetailsWrapper {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 405px;
+    padding: 24px;
+    gap: 20px;
+    background: radial-gradient(63.94% 63.94% at 20% 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    border: 2px solid var(--border-color);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    @include md {}
+
+    @include lg {
+        display: flex;
+        width: 305px;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    @include xl {
+        width: 365px;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    @include xxl {
+        width: 400px;
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .HeadingContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .HeadingText {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+
+            @include md {}
+
+            @include lg {
+                font-size: 18px;
+            }
+
+            @include xl {
+                font-size: 22px;
+            }
+
+            @include xxl {
+                font-size: 24px;
+            }
+        }
+       
+    }
+    .NoriPoints{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        .NoriText{
+            color: #ffffff;
+            font-family: "Manrope";
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            @include lg{
+                font-size: 10px;
+            }
+            @include xl{
+                font-size: 13px;
+            }
+            @include xxl{
+                font-size:16px;
+            }
+        }
+        .PointsContainer{
+            border: 1px solid #7bf179;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            
+            height: 36px;
+            background:linear-gradient(90deg, #7bf179,#585858 0% ,#121212 100%);
+            align-items: center;
+            justify-content:flex-start;
+            gap: 4px;
+            animation: moveBg 5s ease-in-out infinite;
+            background-size: 200% auto; 
+            @keyframes moveBg {
+                0% { background-position: 100% 50%; }
+                50% { background-position: 0% 50%; }
+                100% { background-position: 100% 50%; }
+            }
+            // @keyframes moveBg {
+            //     0% {
+            //         opacity: 0.9;
+            //         background: linear-gradient(90.86deg, #233923, #585858 0%, #121212 100%);
+            //         background-position: 100% 50%;
+            //     }
+            //     10% {
+            //         opacity: 0.95;
+            //         background: linear-gradient(90.86deg, #233923, #585858 10%, #121212 100%);
+            //         background-position: 80% 50%;
+            //     }
+            //     20% {
+            //         opacity: 1;
+            //         background: linear-gradient(90.86deg, #233923, #585858 20%, #121212 100%);
+            //         background-position: 60% 50%;
+            //     }
+            //     30% {
+            //         opacity: 0.95;
+            //         background: linear-gradient(90.86deg, #233923, #585858 30%, #121212 100%);
+            //         background-position: 40% 50%;
+            //     }
+            //     40% {
+            //         opacity: 0.9;
+            //         background: linear-gradient(90.86deg, #233923, #585858 40%, #121212 100%);
+            //         background-position: 20% 50%;
+            //     }
+            //     50% {
+            //         opacity: 1;
+            //         background: linear-gradient(90.86deg, #233923, #585858 50%, #121212 100%);
+            //         background-position: 0% 50%;
+            //     }
+            //     60% {
+            //         opacity: 0.9;
+            //         background: linear-gradient(90.86deg, #233923, #585858 60%, #121212 100%);
+            //         background-position: 100% 50%;
+            //     }
+            //     70% {
+            //         opacity: 0.95;
+            //         background: linear-gradient(90.86deg, #233923, #585858 70%, #121212 100%);
+            //         background-position: 80% 50%;
+            //     }
+            //     80% {
+            //         opacity: 1;
+            //         background: linear-gradient(90.86deg, #233923, #585858 80%, #121212 100%);
+            //         background-position: 60% 50%;
+            //     }
+            //     80% {
+            //         opacity: 0.95;
+            //         background: linear-gradient(90.86deg, #233923, #585858 90%, #121212 100%);
+            //         background-position: 40% 50%;
+            //     }
+            //     100% {
+            //         opacity: 0.9;
+            //         background: linear-gradient(90.86deg, #233923, #585858 100%, #121212 100%);
+            //         background-position: 20% 50%;
+            //     }
+            // }
+            
+            @include lg{
+                gap: 4px;
+                padding: 5px 10px;
+                height: 28px;
+                max-width: 100px;
+            }
+            @include xl{
+                gap: 5px;
+                height: 32px;
+                padding: 12px 9px;
+                max-width: 120px;
+            }
+            @include xxl{
+                max-width: 130px;
+            }
+            .EddyIcon{
+                height: 22px;
+                width: 22px;
+                @include lg{
+                    height: 18px;
+                width:18px;
+                }
+            }
+            .PointsText{
+                font-family: "Manrope";
+                font-size: 12px;
+                @include lg{
+                    font-size: 8px;
+                    gap: 0px;
+                }
+                @include xl{
+                    font-size: 12px;
+                }
+                @include xxl{
+                    font-size: 13px;
+                }
+            }
+
+        }
+    }
+
+}

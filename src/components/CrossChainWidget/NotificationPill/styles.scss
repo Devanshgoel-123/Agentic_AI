@@ -1,0 +1,109 @@
+@import "../../../app/mixin.scss";
+
+.NotificationPillContainer {
+    width: 85%;
+    max-width: 350px;
+    padding: 16px 16px;
+    background: radial-gradient(63.94% 63.94% at 0 100%, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    ;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    @include md {
+        width: 330px;
+        max-width: unset;
+    }
+
+    @include lg {
+        padding: 13px 13px;
+        width: 330px;
+    }
+
+    @include xl {
+        display: flex;
+        padding: 10px 10px;
+        width: 400px;
+    }
+
+    @include xxl {
+        padding: 12px 12px;
+        width: 470px;
+    }
+
+    .PillIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: var(--app-green);
+
+        @include md {
+            font-size: 20px;
+        }
+
+        @include lg {
+            font-size: 18px;
+        }
+
+        @include xl {
+            font-size: 16px;
+        }
+
+        @include xxl {
+            font-size: 20px;
+        }
+    }
+
+    .PillIconRed {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: var(--app-red);
+
+        @include md {
+            font-size: 20px;
+        }
+
+        @include lg {
+            font-size: 18px;
+        }
+
+        @include xl {
+            font-size: 16px;
+        }
+
+        @include xxl {
+            font-size: 20px;
+        }
+    }
+
+    .PillText {
+        color: var(--text-dark-grey);
+        font-size: 12px;
+
+        @include md {
+            font-size: 12px;
+        }
+
+        @include lg {
+            font-size: 10px;
+        }
+
+        @include xl {
+            font-size: 10px;
+        }
+
+        @include xxl {
+            font-size: 12px;
+        }
+
+        .Red {
+            color: var(--app-red);
+        }
+    }
+}

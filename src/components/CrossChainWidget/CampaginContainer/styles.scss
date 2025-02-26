@@ -1,0 +1,100 @@
+@import "../../../app/mixin.scss";
+
+.CampaignWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    @include md {
+        width: auto;
+    }
+    .dustLink{
+        text-decoration: none;
+        color: #fff;
+    }
+    .CampaignContainer {
+        display: flex;
+        align-items: center;
+        height: 65px;
+        background: radial-gradient(63.94% 63.94% at 10% 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+        border: 2px solid var(--border-color);
+        border-radius: 12px;
+        overflow: hidden;
+        width: 85%;
+        max-width: 350px;
+
+        @include md {
+            max-width: unset;
+            height: 75px;
+            width: 330px;
+        }
+
+        @include lg {
+            height: 65px;
+            width: 330px;
+        }
+
+        @include xl {
+            height: 75px;
+            width: 400px;
+        }
+
+        @include xxl {
+            height: 85px;
+            width: 470px;
+        }
+    }
+
+    .DotContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        .CarouselDot {
+            width: 10px;
+            height: 10px;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+
+
+.embla {
+    width: 100%;
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+    height: 100%; 
+    width: 100%;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.DynamicPlaceholder {
+    width: 100%;
+    height: 80px;
+    background: var(--paper-black-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}

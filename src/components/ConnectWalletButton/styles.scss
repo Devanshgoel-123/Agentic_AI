@@ -1,0 +1,131 @@
+@import "../../app/mixin.scss";
+
+.WalletButtonContainer {
+    position: relative;
+    .ConnectWalletButton {
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 16px;
+        font-size: 12px;
+        gap: 8px;
+        background: var(--app-green);
+        color: var(--text-dark);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    
+    
+        @include md {
+            font-family: "ManropeBold";
+        }
+    
+        @include lg {
+            font-size: 12px;
+            padding: 8px 12px;
+        }
+    
+        @include xl {
+            font-size: 14px;
+            padding: 10px 14px;
+        }
+    
+        @include xxl {
+            font-size: 16px;
+            padding: 12px 16px;
+        }
+    
+        &:hover {
+            background: var(--app-light-green);
+        }
+    
+        &:active {
+            background: var(--text-white);
+        }
+    
+    }
+    
+    .ConnectedStateButton {
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 14px;
+        gap: 8px;
+        background: var(--paper-black);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--text-white-dark);
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
+    
+        @include md {
+            gap: 10px;
+            padding: 12px 16px;
+        }
+    
+        @include lg {
+            font-size: 12px;
+            padding: 8px 12px;
+        }
+    
+        @include xl {
+            font-size: 14px;
+            padding: 10px 14px;
+        }
+    
+        @include xxl {
+            font-size: 16px;
+            padding: 12px 16px;
+        }
+    
+        &:hover {
+            opacity: 0.8;
+        }
+    
+        .DropdownIcon {
+            width: 20px;
+            height: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+        }
+    
+    
+        .ConnectedWalletLogo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 22px;
+            height: 22px;
+    
+            @include md {}
+    
+            @include lg {}
+    
+            @include xl {}
+    
+            @include xxl {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+

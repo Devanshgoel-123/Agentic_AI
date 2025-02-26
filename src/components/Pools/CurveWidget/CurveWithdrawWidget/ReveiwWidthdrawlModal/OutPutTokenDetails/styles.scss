@@ -1,0 +1,128 @@
+.TokenInputWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    width: 100%;
+
+    .TokenInputContainer {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        width: 100%;
+        background: #101010;
+        border: 1px solid #1E1E1E;
+        border-radius: 8px;
+
+        .InputContainer {
+            display: flex;
+            flex-direction: column;
+
+            .Token-Input {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                color: var(--text-white);
+                outline: none;
+                border: none;
+                width: 120px;
+                background-color: var(--paper-black-dark);
+
+                &::placeholder {
+                    color: var(--text-medium-grey);
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .DollarValue {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                color: #909090;
+            }
+        }
+
+        .TokenInfoContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 8px;
+            gap: 10px;
+            background: #101010;
+            border: 1px solid #1E1E1E;
+            border-radius: 6px;
+
+            .TokenLogo {
+                width: 24px;
+                height: 24px;
+                position: relative;
+
+                .ChainLogo {
+                    width: 8px;
+                    height: 8px;
+                    position: absolute;
+                    bottom: 8px;
+                    right: 0;
+                }
+            }
+
+            .TokenName {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                color: #FFFFFF;
+
+            }
+        }
+    }
+
+    .BalanceContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        .BalanceValue {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            text-align: right;
+            color: #909090;
+        }
+
+        .MaxBtn {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 2px 8px;
+            border: 1px solid #1E1E1E;
+            border-radius: 6px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            text-align: right;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+    }
+}

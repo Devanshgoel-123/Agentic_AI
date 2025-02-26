@@ -1,0 +1,33 @@
+@import "../../../../app/mixin.scss";
+
+.LabelContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    gap: 8px;
+    background: linear-gradient(106.18deg, rgba(88, 88, 88, 0.04) -108.53%, #121212 86.85%);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+
+    @include md {}
+
+    @include lg {
+        font-size: 10px;
+
+    }
+
+    @include xl {
+        font-size: 10px;
+    }
+
+    @include xxl {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,227 @@
+@import "../../../app/mixin.scss";
+
+.IncentivesHeadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 2;
+    position: relative;
+
+    .BackdropContainer {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        transform: translateX(-50%);
+
+        @include md {}
+
+        @include lg {
+            width: 300px;
+            height: 100%;
+        }
+
+        @include xl {
+            width: 400px;
+            height: 100%;
+        }
+
+        @include xxl {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    @include md {}
+
+    @include lg {
+        gap: 10px;
+    }
+
+    @include xl {
+        gap: 15px;
+    }
+
+    @include xxl {
+        gap: 20px;
+    }
+
+    .Heading {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        color: #FFFFFF;
+        text-align: center;
+
+        @include md {
+            font-size: 40px;
+        }
+
+        @include lg {
+            font-size: 30px;
+        }
+
+        @include xl {
+            font-size: 50px;
+        }
+
+        @include xxl {
+            font-size: 60px;
+        }
+
+        .Green {
+            font-family: 'ManropeBold';
+            color: var(--app-green);
+        }
+    }
+
+    .SubHeading {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: #BEBEBE;
+
+        @include md {
+            font-size: 24px;
+        }
+
+        @include lg {
+            font-size: 18px;
+        }
+
+        @include xl {
+            font-size: 24px;
+        }
+
+        @include xxl {
+            font-size: 28px;
+        }
+    }
+
+    .LabelText {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        text-align: center;
+        color: #BEBEBE;
+
+        @include md {
+            font-size: 14px;
+        }
+
+        @include lg {
+            font-size: 12px;
+        }
+
+        @include xl {
+            font-size: 14px;
+        }
+
+        @include xxl {
+            font-size: 16px;
+        }
+
+        .Green {
+            color: var(--app-green);
+        }
+    }
+
+    .ClaimButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 32px;
+        gap: 10px;
+        background-color: var(--app-green);
+        border-radius: 8px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        text-align: center;
+        color: var(--text-dark);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        z-index: 2;
+
+        @include md {
+            font-family: 'ManropeBold';
+            padding: 10px 42px;
+            font-size: 14px;
+        }
+
+        @include lg {
+            padding: 10px 32px;
+            font-size: 13px;
+        }
+
+        @include xl {
+            padding: 12px 42px;
+            font-size: 16px;
+        }
+
+        @include xxl {
+            padding: 15px 52px;
+            font-size: 18px;
+        }
+
+        &:hover {
+            background: var(--app-light-green);
+        }
+
+        &:active {
+            background: var(--text-white);
+        }
+    }
+
+    .ClaimButtonInActive {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 32px;
+        gap: 10px;
+        background: var(--button-inactive);
+        border-radius: 8px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        text-align: center;
+        color: var(--text-inactive);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        z-index: 2;
+
+        @include md {
+            font-family: 'ManropeBold';
+            padding: 10px 42px;
+            font-size: 14px;
+        }
+
+        @include lg {
+            padding: 10px 32px;
+            font-size: 13px;
+        }
+
+        @include xl {
+            padding: 12px 42px;
+            font-size: 16px;
+        }
+
+        @include xxl {
+            padding: 15px 52px;
+            font-size: 18px;
+        }
+    }
+}

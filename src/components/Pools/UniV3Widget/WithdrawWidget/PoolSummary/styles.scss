@@ -1,0 +1,217 @@
+@import "../../../../../app/mixin.scss";
+
+.PoolSummaryWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+    gap: 12px;
+    background: radial-gradient(63.94% 63.94% at 0 100%, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    border: 1px solid #1E1E1E;
+    border-radius: 8px;
+
+    .Label {
+        font-family: 'ManropeBold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        color: #FFFFFF;
+
+        @include md {}
+
+        @include lg {
+            font-size: 16px;
+        }
+
+        @include xl {
+            font-size: 18px;
+        }
+
+        @include xxl {
+            font-size: 20px;
+        }
+    }
+
+    .InfoContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        .Label {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            color: #FFFFFF;
+
+
+            @include md {}
+
+            @include lg {
+                font-size: 14px;
+            }
+
+            @include xl {
+                font-size: 15px;
+            }
+
+            @include xxl {
+                font-size: 16px;
+            }
+        }
+
+        .InfoSection {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .Label {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                text-align: center;
+                color: #C2C2C2;
+
+                @include md {}
+
+                @include lg {
+                    font-size: 12px;
+                }
+
+                @include xl {
+                    font-size: 13px;
+                }
+
+                @include xxl {
+                    font-size: 14px;
+                }
+            }
+
+            .Value {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                text-align: center;
+                color: #C2C2C2;
+
+                @include md {}
+
+                @include lg {
+                    font-size: 12px;
+                }
+
+                @include xl {
+                    font-size: 13px;
+                }
+
+                @include xxl {
+                    font-size: 14px;
+                }
+            }
+
+            .TokenInfo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                .TokenLogo {
+                    width: 22px;
+                    height: 22px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .TokenName {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #F7F7F7;
+
+
+                    @include md {}
+
+                    @include lg {
+                        font-size: 14px;
+                    }
+
+                    @include xl {
+                        font-size: 15px;
+                    }
+
+                    @include xxl {
+                        font-size: 16px;
+                    }
+                }
+
+
+            }
+
+            .TokenValue {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                text-align: center;
+                color: #F7F7F7;
+
+
+                @include md {}
+
+                @include lg {
+                    font-size: 14px;
+                }
+
+                @include xl {
+                    font-size: 15px;
+                }
+
+                @include xxl {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .FeeValueContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        color: #7BF179;
+
+
+        @include md {}
+
+        @include lg {
+            font-size: 16px;
+        }
+
+        @include xl {
+            font-size: 18px;
+        }
+
+        @include xxl {
+            font-size: 20px;
+        }
+    }
+
+
+}

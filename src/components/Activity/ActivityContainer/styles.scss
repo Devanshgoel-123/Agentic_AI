@@ -1,0 +1,322 @@
+@import "../../../app/mixin.scss";
+
+.ActivityContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 18px;
+    width: 90%;
+    height: 95%;
+    background: radial-gradient(63.94% 63.94% at 0 100%, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    ;
+    border: 2px solid #1E1E1E;
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    @include md {
+        max-height: 600px;
+        padding: 15px;
+        width: 330px;
+    }
+
+    @include lg {
+        max-height: 600px;
+        padding: 15px;
+        width: 330px;
+    }
+
+    @include xl {
+        max-height: 600px;
+        padding: 18px;
+        width: 400px;
+    }
+
+    @include xxl {
+        max-height: 700px;
+        padding: 24px;
+        width: 470px;
+    }
+
+    .HeadingContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .HeadingText {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+
+            @include md {}
+
+            @include lg {
+                font-size: 17px;
+            }
+
+            @include xl {
+                font-size: 22px;
+            }
+
+            @include xxl {
+                font-size: 24px;
+            }
+        }
+
+        .ArrowIcon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            gap: 8px;
+            width: 30px;
+            height: 30px;
+            background: #121212;
+            border: 1px solid #1E1E1E;
+            border-radius: 6px;
+            cursor: pointer;
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
+
+            @include md {}
+
+            @include lg {
+                width: 30px;
+                height: 30px;
+            }
+
+            @include xl {
+                width: 35px;
+                height: 35px;
+            }
+
+            @include xxl {
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                transform: scale(0.9);
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .ActivityCardContainer {
+        margin-top: 20px;
+        width: 100%;
+        gap: 8px;
+        overflow: auto;
+        padding-bottom: 10px;
+        position: relative;
+        flex: 1;
+
+        .EmptyPlaceHolder {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
+
+            @include md {
+                margin-top: 30px;
+            }
+
+            @include lg {
+                margin-top: 20px;
+            }
+
+            @include xl {
+                margin-top: 30px;
+            }
+
+            .LabelIcon {
+                font-size: 32px;
+                color: var(--text-medium-grey);
+            }
+
+            .Label {
+                font-family: 'Manrope';
+                width: 100%;
+                text-align: center;
+                font-size: 14px;
+                color: var(--text-medium-grey);
+
+                @include md {
+                    font-size: 14px;
+
+                }
+
+                @include lg {
+                    font-size: 14px;
+                }
+
+                @include xl {
+                    font-size: 16px;
+                }
+
+                @include xxl {
+                    font-size: 18px;
+                }
+            }
+
+            .ConnectWalletBtn {
+                width: fit-content;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 12px 16px;
+                font-size: 12px;
+                gap: 8px;
+                background: var(--app-green);
+                color: var(--text-dark);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 8px;
+                font-family: "Manrope";
+                font-style: normal;
+                font-weight: 700;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+
+
+                @include md {
+                    font-family: "ManropeBold";
+                }
+
+                @include lg {
+                    font-size: 12px;
+                    padding: 8px 12px;
+                }
+
+                @include xl {
+                    font-size: 14px;
+                    padding: 10px 14px;
+                }
+
+                @include xxl {
+                    font-size: 16px;
+                    padding: 12px 16px;
+                }
+
+                &:hover {
+                    background: var(--app-light-green);
+                }
+
+                &:active {
+                    background: var(--text-white);
+                }
+            }
+
+        }
+
+        .Placeholder {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-medium-grey);
+            font-size: 14px;
+        }
+
+        .ConnectWalletState {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+            .Label {
+                font-family: 'Manrope';
+                width: 90%;
+                text-align: center;
+                font-size: 14px;
+                color: var(--text-medium-grey);
+
+                @include md {
+                    font-size: 14px;
+                    width: 70%;
+                }
+
+                @include lg {
+                    font-size: 14px;
+                }
+
+                @include xl {
+                    font-size: 16px;
+                }
+
+                @include xxl {
+                    font-size: 18px;
+                }
+            }
+
+            .ConnectWalletBtn {
+                width: fit-content;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 12px 16px;
+                font-size: 12px;
+                gap: 8px;
+                background: var(--app-green);
+                color: var(--text-dark);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 8px;
+                font-family: "Manrope";
+                font-style: normal;
+                font-weight: 700;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+
+
+                @include md {
+                    font-family: "ManropeBold";
+                }
+
+                @include lg {
+                    font-size: 12px;
+                    padding: 8px 12px;
+                }
+
+                @include xl {
+                    font-size: 14px;
+                    padding: 10px 14px;
+                }
+
+                @include xxl {
+                    font-size: 16px;
+                    padding: 12px 16px;
+                }
+
+                &:hover {
+                    background: var(--app-light-green);
+                }
+
+                &:active {
+                    background: var(--text-white);
+                }
+            }
+        }
+
+
+        .LoaderContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

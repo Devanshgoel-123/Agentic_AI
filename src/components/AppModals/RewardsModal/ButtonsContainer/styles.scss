@@ -1,0 +1,29 @@
+@import "../../../../app//mixin.scss";
+
+.rewardsButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 4px;
+    padding-inline: 16px;
+    padding-block: 8px;
+    align-items: center;
+    border: 2px solid var(--border-color);
+    background-color: var(--button-inactive);
+    border-radius: 6px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    
+    line-height: 20px;
+    text-align: center;
+    color: var(--text-white-dense);
+    cursor: pointer;
+    @include md{
+        font-size: 12px;
+    }
+    @include xl{
+        font-size: 14px;
+    }
+
+}

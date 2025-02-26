@@ -1,0 +1,60 @@
+@import "../../../../app/mixin.scss";
+
+
+.progressContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 100%;
+    padding: 0px 12px;
+    justify-content: flex-start;
+    font-family: 'ManropeMedium';
+    background-color: "#4c4c4c";
+    .progressBarFull{
+        height: 8px;
+        width: 100%;
+        border-radius: 20px;
+        background-color: #4c4c4c;
+        .progressBarPartial{
+            height: 8px;
+            border-radius: 8px;
+            background: repeating-linear-gradient(
+    115deg,
+    var(--app-green) 0,
+    var(--app-green) 2.5%,
+    #5FBF5D 2.5%,
+    #5FBF5D 5%         
+          );
+        }
+    }
+    .holdingsContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 8px;
+        .holdingsText{
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 17px;
+        }
+        .countContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            
+            line-height: 43px;
+            font-weight: 700;
+            @include lg{
+                font-size: 16px;
+            }
+            @include xl{
+                font-size: 20px;
+            }
+        }
+        .totalCountText{
+            color: var(--app-green);    
+        }
+    }
+    
+}

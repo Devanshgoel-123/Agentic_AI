@@ -1,0 +1,35 @@
+@import "../../../../../../app/mixin.scss";
+
+.UniV3PoolLabel {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 6px;
+    background: linear-gradient(104.9deg, rgba(88, 88, 88, 0.5) -76.37%, #121212 97.95%), linear-gradient(88.2deg, #DFCC28 -53.68%, rgba(223, 204, 40, 0) 133.62%), #FFFFFF;
+    border: 1px solid #DFCC28;
+    border-radius: 8px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #FFFFFF;
+
+    @include md {}
+
+    @include lg {
+        padding: 2px 5px;
+        font-size: 10px;
+    }
+
+    @include xl {
+        padding: 2px 6px;
+        font-size: 11px;
+    }
+
+    @include xxl {
+        padding: 2px 8px;
+        font-size: 12px;
+    }
+}

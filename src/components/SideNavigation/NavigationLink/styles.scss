@@ -1,0 +1,80 @@
+@import "../../../app/mixin.scss";
+
+.NavigationLinkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #757575;
+
+    @include md {}
+
+    @include lg {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    @include xl {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    @include xxl {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .LinkIcon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        gap: 8px;
+        width: 36px;
+        height: 36px;
+        background: var(--paper-black-medium);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        position: relative;
+
+        @include md {}
+
+        @include lg {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include xl {
+            width: 36px;
+            height: 36px;
+        }
+
+        @include xxl {
+            width: 36px;
+            height: 36px;
+        }
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 0px;
+            background-color: var(--app-green);
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        &.show-line::before {
+            height: 60%;
+        }
+    }
+}

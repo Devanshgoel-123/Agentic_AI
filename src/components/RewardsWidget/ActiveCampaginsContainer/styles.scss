@@ -1,0 +1,63 @@
+@import "../../../app/mixin.scss";
+.ActiveCampaignContainer {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    @include md{
+        min-height: 140px;
+    }
+    @include lg{
+        flex-direction: row;
+
+    }
+
+    .PaginationDotWrapper{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top:5px;
+        justify-content: center;
+        gap: 5px;
+        .paginationDots{
+            height:8px;
+            width:8px;
+            cursor: pointer;
+            background-color: #959595;
+            border-radius: 10px;
+          }
+    }
+    .ActiveCampaign {
+        width: 100%;
+        background-color: #000000;
+        border-radius: 10px;
+        overflow: hidden;
+        @include lg{
+            width: 50%;
+        }
+    }
+}
+
+.embla {
+    width: 100%;
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%; 
+}
+
+.embla__slide {
+    flex: 0 0  100% 100%;
+    width: 100%;
+}
+.DynamicCampaignDiv {
+    width: 100%;
+    height: 160px;
+    background:#0d0d0d;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+

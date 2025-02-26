@@ -1,0 +1,120 @@
+@import "../../../../app/mixin.scss";
+
+.SummaryWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    width: 40%;
+    border-radius: 12px;
+    @include md{
+        width: 70%;
+        padding: 15px;
+    }
+    @include lg{
+        width: 50%;
+    }
+    @include xl{
+        width: 40%;
+        padding: 20px;
+       
+    }
+    @include xxl{
+        width: 30%;
+    }
+    .HeaderText{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        @include md{
+            font-size: 14px;
+        }
+        @include xl{
+            font-size: 18px;
+        }
+       
+    }
+    .TokenChatSummary{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        :nth-child(1){
+            align-items: flex-end;
+        }
+        .SwapLogoSummary {
+            display: flex;
+            position: absolute;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 6px;
+            width: 35px;
+            height: 35px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+            transform: rotate(-90deg);
+            color: var(#ffffff);
+            cursor: pointer;
+            @include md{
+                left: 95px;
+            }
+            @include lg {
+                padding: 8px;
+                font-size: 28px;
+                left: 120px;
+                width: 35px;
+                height: 35px;
+            }
+            @include xl {
+                padding: 10px;
+                font-size: 30px;
+                width: 42px;
+                left: 160px;
+                height: 42px;
+            }
+            @include xxl {
+                padding: 12px;
+                font-size: 30px;
+                width: 50px;
+                height: 50px;
+            }
+            &:hover {
+                opacity: 0.8;
+                transform: scale(0.95);
+            }
+          }
+    }
+    .SummaryText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        .SummaryRow{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            :nth-child(1){
+                color: #909090;
+                font-family: "Manrope";
+                font-weight: 500;
+                font-family: 14px;
+            }
+            .tokenLogoAmount{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 5px;
+                .tokenLogo{
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+    }
+}

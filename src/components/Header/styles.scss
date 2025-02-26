@@ -1,0 +1,254 @@
+@import "../../app/mixin.scss";
+
+.HeaderSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .RewardsBanner {
+        width: 100%;
+        padding: 10px 10px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        background-color: #1A1A1A;
+        position: relative;
+
+        @include lg {
+            display: flex;
+        }
+
+        .BannerBg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%
+        }
+
+        .Heading {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            text-align: center;
+            color: #CCCCCC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            z-index: 2;
+
+            .GreenIcon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #7BF179;
+                margin-bottom: 2px;
+            }
+
+            .Green {
+                color: #7BF179;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .SubHeading {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            text-align: center;
+            color: #CCCCCC;
+        }
+    }
+
+
+    .MaintenanceBanner {
+        width: 100%;
+        padding: 5px 10px;
+        background-color: #FCD535;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-family: "Manrope";
+        color: var(--text-dark);
+        text-align: center;
+
+        @include lg {
+            font-family: "ManropeBold";
+        }
+    }
+
+    .HeaderWrapper {
+        width: 100%;
+        padding-block: 18px;
+        padding-inline: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        background-color: transparent;
+
+        @include md {
+            padding-block: 10px;
+            padding-inline: 20px;
+            background-color: var(--paper-black-green);
+        }
+
+        @include lg {
+            background-color: var(--paper-black-green);
+            padding-block: 8px;
+            padding-inline: 33px;
+        }
+
+        @include xl {
+            padding-block: 12px;
+            padding-inline: 37px;
+        }
+
+        @include xxl {
+            padding-block: 15px;
+            padding-inline: 40px;
+        }
+
+        .LogoContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .Logo {
+                width: 35px;
+                height: 35px;
+
+                @include md {}
+
+                @include lg {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                @include xl {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                @include xxl {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .LogoText {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                color: var(--text-white-dense);
+                display: none;
+
+                @include md {}
+
+                @include lg {
+                    display: block;
+                    font-size: 16px;
+                }
+
+                @include xl {
+                    display: block;
+                    font-size: 18px;
+                }
+
+                @include xxl {
+                    display: block;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .HeaderContainer {
+            width: fit-content;
+            height: 100%;
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+
+            @include md {}
+
+            @include lg {
+                display: flex;
+            }
+
+            @include xl {
+                display: flex;
+            }
+
+            @include xxl {
+                display: flex;
+            }
+        }
+
+        .HeaderButtonsContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .HeaderHourGlass {
+            margin-right: 10px;
+            height: 40px;
+            width: 40px;
+            padding: 10px;
+            display: flex;
+            column-gap: 20px;
+            justify-content: center;
+            align-items: center;
+            background: var(--paper-black-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            color: var(--text-dense-grey-dark);
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+                transform: scale(0.95);
+            }
+        }
+
+        .activeTransactionCount {
+            position: absolute;
+            top: 2px;
+            right: 4px;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 8px;
+            color: black;
+            z-index: 10;
+            background-color: var(--app-green);
+            font-family: 'Manrope';
+            font-style: normal;
+            font-size: 12px;
+            border-radius: 50%;
+        }
+
+        .HourGlassIcon {
+            font-size: 20px;
+        }
+
+    }
+}

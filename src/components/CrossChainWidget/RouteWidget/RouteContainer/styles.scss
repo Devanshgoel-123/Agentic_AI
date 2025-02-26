@@ -1,0 +1,170 @@
+@import "../../../../app/mixin.scss";
+
+.RouteContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    .RouteToken {
+        width: 35px;
+        height: 35px;
+        position: relative;
+
+        @include md {}
+
+        @include lg {
+            width: 25px;
+            height: 25px;
+        }
+
+        @include xl {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include xxl {
+            width: 35px;
+            height: 35px;
+        }
+
+        .ChainLogo {
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            bottom: 0;
+            right: -2px;
+
+            @include md {}
+
+            @include lg {
+                width: 12px;
+                height: 12px;
+            }
+
+            @include xl {
+                width: 13px;
+                height: 13px;
+            }
+
+            @include xxl {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+
+    .ArrowIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: auto;
+
+        @include md {}
+
+        @include lg {
+            width: 15px;
+        }
+
+        @include xl {
+            width: 18px;
+        }
+
+        @include xxl {
+            width: 20px;
+        }
+    }
+
+    .RouteGreenContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 8px;
+        gap: 8px;
+        border: 1px solid var(--app-green-dark);
+        border-radius: 8px;
+
+
+        @include md {}
+
+        @include lg {
+            padding: 5px 5px;
+        }
+
+        @include xl {
+            padding: 6px 6px;
+        }
+
+        @include xxl {
+            padding: 8px 8px;
+        }
+
+        .SwapTokenContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+
+            .TokenLogo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20px;
+                height: 20px;
+
+                @include md {}
+
+                @include lg {
+                    width: 14px;
+                    height: 14px;
+                }
+
+                @include xl {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                @include xxl {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .TokenName {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 8px;
+                color: var(--text-medium-grey);
+            }
+        }
+
+        .SwapLogo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 16px;
+            height: 16px;
+
+            @include md {}
+
+            @include lg {
+                width: 8px;
+                height: 8px;
+            }
+
+            @include xl {
+                width: 12px;
+                height: 12px;
+            }
+
+            @include xxl {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+    }
+}

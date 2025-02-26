@@ -1,0 +1,231 @@
+@import "../../../../app/mixin.scss";
+
+.DropdownContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    width: auto;
+    height: auto;
+    background: radial-gradient(63.94% 63.94% at 100% 100%, hsla(0, 0%, 100%, .02) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 0px 48px rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+
+
+    @include md {}
+
+    @include lg {
+        min-width: 180px;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    @include xl {
+        min-width: 210px;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    @include xxl {
+        min-width: 236px;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .NavigationLinkContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+
+        .NavigationLink {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            font-family: 'ManropeMedium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text-dense-grey-dark);
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+            @include md {}
+
+            @include lg {
+                font-size: 12px;
+            }
+
+            @include xl {
+                font-size: 14px;
+            }
+
+            @include xxl {
+                font-size: 16px;
+            }
+
+            &:hover {
+                color: var(--app-green);
+                opacity: 0.8;
+            }
+
+            .Icon {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 4px;
+                width: 24px;
+                height: 24px;
+                background: #121212;
+                border: 0.666667px solid var(--border-color);
+                border-radius: 2.66667px;
+                color: var(--text-white);
+
+                @include md {}
+
+                @include lg {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                @include xl {
+                    width: 22px;
+                    height: 22px;
+                }
+
+                @include xxl {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            .ComingSoonLabel {
+                font-size: 10px;
+                color: var(--app-green);
+                border: 1px solid var(--app-green);
+                padding: 2px 10px;
+                border-radius: 40px;
+                opacity: 0.8;
+
+                @include md {}
+
+                @include lg {
+                    font-size: 8px;
+                }
+
+                @include xl {
+                    padding: 2px 8px;
+                    font-size: 9px;
+                }
+
+                @include xxl {
+                    padding: 2px 10px;
+                    font-size: 10px;
+                }
+            }
+
+        }
+    }
+
+    hr {
+        width: 100%;
+        border: 1px solid var(--border-color);
+    }
+
+    .SocialLinkContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        .SocialLink {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-dense-grey-dark);
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+
+            @include md {}
+
+            @include lg {
+                font-size: 10px;
+            }
+
+            @include xl {
+                font-size: 12px;
+            }
+
+            @include xxl {
+                font-size: 14px;
+            }
+
+            &:hover {
+                opacity: 0.8;
+                color: var(--app-green);
+            }
+
+            .Icon {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 4px;
+                width: 24px;
+                height: 24px;
+                background: var(--paper-black-medium);
+                border: 0.666667px solid var(--border-color);
+                border-radius: 2.66667px;
+
+
+                @include md {}
+
+                @include lg {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                @include xl {
+                    width: 22px;
+                    height: 22px;
+                }
+
+                @include xxl {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+        }
+    }
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+    padding: 0px !important;
+}
+
+.MuiList-root {
+    padding: 0px !important;
+    color: var(--text-white);
+    background-color: var(-paper-black-dense);
+}
+
+.MuiButtonBase-root {
+    padding: 0px !important;
+}
+
+.MuiPaper-root {
+    width: inherit;
+    background-color: transparent !important;
+}

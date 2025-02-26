@@ -1,0 +1,266 @@
+@import "../../../../../app/mixin.scss";
+
+.SprintCardModalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    width: 90%;
+    @include md{
+        width: 70%;
+        height: 80%;
+    }
+    @include lg{
+        width: 60%;
+    }
+    @include xl{
+        width: 65%;
+    }
+    @include xxl{
+        width: 50%;
+    }
+    .ModalWrapper{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .Confetti{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .SprintCardModalContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+            padding: 25px;
+            background: #111111;
+            border: 2px solid #1E1E1E;
+            backdrop-filter: blur(4px);
+            border-radius: 12px;
+            @include md{
+                width: 80%;
+            }
+            @include lg{
+                width: 60%;
+            }
+            @include xl{
+                width: 50%;
+            }
+            @include xxl{
+                width: 50%;
+            }
+            .ModalHeading{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .HeadingText{
+                    font-size: 18px;
+                    background: linear-gradient(95.86deg, var(--text-grey) -20.23%, var(--text-white) 74.96%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    @include md{
+                        font-size: 20px;
+                        font-family: "manrope";
+                    }
+                    @include xl{
+                        font-size: 22px;
+                    }
+                    
+                }
+                .HeadingBtn{
+                    display: flex;
+                    position: absolute;
+                    justify-content: flex-end;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: #121212;
+                    transition: all 0.2s ease-in-out;
+                    border: 1px solid #1e1e1e;
+                    padding: 8px;
+                    border-radius: 6px;
+                    right: 32px;
+                    font-size: 10px;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(0.9);
+                        opacity: 0.8;
+                    }
+                    @include md{
+                        padding: 12px;
+                        font-size: 14px;
+                    }
+                    @include lg{
+                        font-size: 12px;
+                        padding: 10px;
+                    }
+                }
+            }
+            .SprintDetailsContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+    
+                .SprintLogo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+    
+                    .Logo {
+                        width: 28px;
+                        height: 28px;
+                    }
+    
+                    .Content {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        @include md{
+                            font-size: 18px;
+                        }
+                        @include lg{
+                            font-size: 16px;
+                        }
+                        @include xl{
+                            font-size: 18px;
+                        }
+                        @include xxl{
+                            font-size: 18px;
+                        }
+                    }
+                }
+    
+                .SprintPoints {
+                    width: fit-content;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding:6px 16px;
+                    box-sizing: border-box;
+                    border: 0.82px solid #7BF179;
+                    border-radius: 14.75px;
+                    font-family: 'Manrope';
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 14.75px;
+                    color: #FFFFFF;
+                    @include md{
+                        font-size: 13.7143px;
+                        border: 1.14286px solid rgba(123, 241, 121, 0.25);
+                        border-radius: 20.5714px;
+                        padding: 5px 22px;
+                    }
+                }
+            }
+    
+            .SprintText {
+                font-family: 'Manrope';
+                font-weight: 500;
+                font-size: 12px;
+                color: #E6E6E6;
+                line-height: 18px;
+                text-wrap: wrap;
+                @include md{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                @include lg{
+                    font-size: 12px;
+                }
+                @include xl{
+                    font-size: 14px;
+                }
+                @include xxl{
+                    font-size: 14px
+                }
+            }
+    
+            .LinkContainer{
+                display: flex;
+                width: 100%;
+                border-radius: 6px;
+                padding: 10px;
+                flex-direction: row;
+                border: 1px solid #505050;
+                .inputText{
+                    color: #505050;
+                    width: 100%;
+                    outline: none;
+                    text-decoration: none;
+                    border: none;
+                    @include md{
+                        font-size: 16px;
+                    }
+                    @include lg{
+                        font-size: 14px;
+                    }
+                }   
+            }
+            .ActionBtn {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 36px;
+                background: #7BF179;
+                border: 0.72px solid #7BF179;
+                border-radius: 6px;
+                font-family: 'Manrope';
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 28px;
+                color: #323227;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                @include md{
+                    font-size: 16px;
+                    height: 52px;
+                }
+                @include lg{
+                    font-size: 16px;
+                }
+                @include xl{
+                    font-size: 18px;
+                }
+                @include xxl{
+                    font-size: 16px;
+                }
+                &:hover {
+                    background: var(--app-light-green);
+                    transform: scale(1.05);
+                }
+    
+                &:active {
+                    background: var(--text-white);
+                }
+            }
+            .Inactive{
+                background-color: #1E1E1E;
+                color: #FFFFFF;
+                &:active {
+                    background: #1E1E1E;
+                }
+                &:hover {
+                    background:#1E1E1E;
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                border: 1px solid #1E1E1E;
+            }
+        }
+    }
+    
+}

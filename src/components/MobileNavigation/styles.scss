@@ -1,0 +1,143 @@
+@import "../../app/mixin.scss";
+
+.MobileNavigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 4;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 10px;
+    background: #111111;
+    overflow: hidden;
+
+    @include md {}
+
+    @include lg {
+        display: none;
+    }
+
+    @include xl {}
+
+    @include xxl {}
+
+
+    .ArrowContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 8px;
+        border-bottom: 1px solid #1e1e1e;
+
+        @include md {
+            width: 100px;
+        }
+
+        @include lg {}
+
+        @include xl {}
+
+        @include xxl {}
+
+        .BounceContainer {
+            animation: downAnim infinite 3s ease-in-out;
+        }
+
+        .ArrowIcon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    .NavigationContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 30px;
+
+        .NavigationLink {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+
+            .NavigationIcon {
+                overflow: hidden;
+                width: 36px;
+                height: 36px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--border-color);
+                padding: 4px;
+                border-radius: 4px;
+                font-size: 18px;
+                color: var(--text-dense-grey-dark);
+
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    width: 0px;
+                    height: 1px;
+                    background-color: var(--app-green);
+                    transition: all 0.3s ease;
+                    opacity: 0.7;
+                }
+
+                &.show-line::before {
+                    width: 60%;
+                }
+
+            }
+
+            .NavigationText {
+                color: #757575;
+            }
+        }
+    }
+
+
+}
+
+@keyframes downAnim {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(3px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+}

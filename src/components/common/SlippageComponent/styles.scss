@@ -1,0 +1,51 @@
+@import "../../../app/mixin.scss";
+
+.SlippageIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    background: var(--paper-black-medium);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1);
+    font-size: 30px;
+    color: var(--text-dense-grey-dark);
+
+    @include md {}
+
+    @include lg {
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+
+    }
+
+    @include xl {
+        width: 35px;
+        height: 35px;
+        font-size: 35px;
+
+    }
+
+    @include xxl {
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+
+    }
+
+    &:hover {
+        opacity: 0.8;
+        transform: scale(0.95);
+    }
+}

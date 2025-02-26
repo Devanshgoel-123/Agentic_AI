@@ -1,0 +1,64 @@
+@import "../../../app/mixin.scss";
+
+.SocialIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #757575;
+
+    @include md {}
+
+    @include lg {
+        font-size: 10px;
+    }
+
+    @include xl {
+        font-size: 12px;
+    }
+
+    @include xxl {
+        font-size: 12px;
+    }
+
+    .SocialIcon {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 4px;
+        gap: 15px;
+        width: 24px;
+        height: 24px;
+        background: var(--paper-black-medium);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+
+        @include md {}
+
+        @include lg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @include xl {
+            width: 24px;
+            height: 24px;
+        }
+
+        @include xxl {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

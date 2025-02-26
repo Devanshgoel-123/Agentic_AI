@@ -1,0 +1,130 @@
+@import "../../../../app/mixin.scss";
+.PointsInfoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    .PointsCard {
+        height: 70px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #1A1A1A;
+        gap: 5px;
+        border-radius: 6px;
+        width: 45%;
+        @include md{
+            width: 30%;
+        }
+        @include lg{
+            width: 40%;
+        }
+        .Label {
+            font-family: 'Manropemedium';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            color: #A1A1A1;
+
+            @include md{
+                font-size: 14px;
+            }
+            @include lg{
+                font-size: 13px;
+            }
+            @include xl{
+                font-size: 16px;
+            }
+        }
+
+        .PointsInfo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            @include md{
+                
+            }
+            .PointsValue {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                color: #7BF179;
+                @include md{
+                    font-size: 18px;
+                }
+            }
+
+            .Icon {
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+    }
+
+    .PlaceHolderCard {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding: 20px;
+        background-color: #1A1A1A;
+        border-radius: 6px;
+        @include md{
+            padding: 12px;
+        }
+
+        .Label {
+            font-family: 'Manropebold';
+            font-style: normal;
+            font-weight: 500;
+            width: 100px;
+            color: #FFFFFF;
+            @include md{
+                font-family: "Manropemedium";
+                font-size: 12px;
+            }
+        }
+
+        .ActionBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+           
+            background: #7BF179;
+            border-radius: 4.86275px;
+            transition: all 0.3s ease-in-out;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            @include md{
+                font-size: 12px;
+                padding: 8px 24px;
+                font-family: "Manropebold";
+            }
+            text-align: center;
+            color: #323227;
+            cursor: pointer;
+            &:hover {
+                background: var(--app-light-green);
+                transform: scale(1.1);
+            }
+
+            &:active {
+                background: var(--text-white);
+            }
+        }
+
+    }
+}

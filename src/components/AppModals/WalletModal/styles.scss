@@ -1,0 +1,85 @@
+@import "../../../app/mixin.scss";
+
+.WalletModalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    display: none;
+
+    @include md {
+        display: block;
+    }
+
+    .WalletModalContainer {
+        width: 470px;
+        // max-height: 660px;
+        background: radial-gradient(63.94% 63.94% at 0 100%, hsla(0, 0%, 100%, .02) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+        border: 2px solid var(--border-color);
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+        padding: 25px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: all 0.1s ease-in-out;
+
+        @include md {}
+
+        @include lg {
+            width: 330px;
+            // max-height: 540px;
+            padding: 15px 20px;
+            gap: 18px;
+        }
+
+        @include xl {
+            width: 400px;
+            // max-height: 600px;
+            padding: 20px 25px;
+            gap: 25px;
+        }
+
+        @include xxl {
+            width: 470px;
+            // max-height: 660px;
+            padding: 25px;
+            gap: 30px;
+        }
+
+        .WalletWrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            @include md {}
+
+            @include lg {
+                gap: 15px;
+            }
+
+            @include xl {
+                gap: 18px;
+            }
+
+            @include xxl {
+                gap: 20px;
+            }
+
+            .WalletContainer {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

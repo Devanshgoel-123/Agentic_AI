@@ -1,0 +1,324 @@
+@import "../../../app/mixin.scss";
+
+.TokenModalWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  outline: none;
+
+  @include md {
+    bottom: unset;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .TokenModalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 18px;
+    gap: 18px;
+    width: 100vw;
+    height: auto;
+    background: radial-gradient(63.94% 63.94% at 0 100%, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    border: 2px solid var(--border-color);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    @include md {
+      gap: 20px;
+      padding: 20px;
+      width: 540px;
+      height: 568px;
+    }
+
+    @include lg {
+      gap: 20px;
+      padding: 20px;
+      width: 400px;
+      height: 468px;
+    }
+
+    @include xl {
+      gap: 24px;
+      padding: 24px;
+      width: 540px;
+      height: 568px;
+    }
+
+    @include xxl {
+      gap: 32px;
+      padding: 32px;
+      width: 640px;
+      height: 668px;
+    }
+
+    .TokensChainsContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+
+      @include md {
+        flex-direction: row;
+      }
+
+      .DividerLine {
+        width: 1px;
+        height: 100%;
+        background-color: var(--border-color);
+        display: none;
+
+        @include md {
+          display: block;
+        }
+      }
+
+      .ChainWrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding-right: 0px;
+        gap: 15px;
+
+        @include md {
+          width: 40%;
+          height: 100%;
+          gap: 10px;
+          padding-right: 10px;
+        }
+
+        @include lg {
+          gap: 10px;
+          padding-right: 0px;
+        }
+
+        @include xl {
+          gap: 12px;
+          padding-right: 12px;
+        }
+
+        @include xxl {
+          gap: 15px;
+          padding-right: 15px;
+        }
+
+        .ContainerHeading {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          color: #ffffff;
+          display: none;
+
+          @include md {
+            display: block;
+            font-size: 14px;
+          }
+
+          @include lg {
+            font-size: 14px;
+          }
+
+          @include xl {
+            font-size: 16px;
+          }
+
+          @include xxl {
+            font-size: 18px;
+          }
+        }
+
+        .ChainsContainer {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 5px;
+
+          @include md {
+            gap: 10px;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .TokensWrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0px;
+
+        @include md {
+          width: 60%;
+          height: 100%;
+          gap: 10px;
+          padding-left: 15px;
+        }
+
+        @include lg {
+          gap: 10px;
+          padding-left: 0;
+        }
+
+        @include xl {
+          gap: 12px;
+          padding-left: 18px;
+        }
+
+        @include xxl {
+          gap: 15px;
+          padding-left: 20px;
+        }
+
+        .ContainerHeading {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          color: #ffffff;
+          display: none;
+
+          @include md {
+            font-size: 14px;
+          }
+
+          @include lg {
+            font-size: 14px;
+          }
+
+          @include xl {
+            font-size: 16px;
+          }
+
+          @include xxl {
+            font-size: 18px;
+          }
+        }
+
+        .SearchContainer {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 10px;
+          gap: 6px;
+          width: 100%;
+          background: var(--paper-black-dark);
+          border: 1px solid var(--border-color);
+          border-radius: 6px;
+
+
+          @include md {
+            padding: 8px;
+          }
+
+          .SearchLogo {
+            width: 16px;
+            height: 16px;
+            padding: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include md {
+              width: 12px;
+              height: 12px;
+            }
+
+            @include lg {
+              width: 12px;
+              height: 12px;
+            }
+
+            @include xl {
+              width: 14px;
+              height: 14px;
+            }
+
+            @include xxl {
+              width: 16px;
+              height: 16px;
+            }
+          }
+
+          .SearchInput {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            color: var(--text-medium-grey);
+            background: transparent;
+            outline: none;
+            border: none;
+            width: 100%;
+
+            @include md {
+              font-size: 10px;
+            }
+
+            @include lg {
+              font-size: 10px;
+            }
+
+            @include xl {
+              font-size: 12px;
+            }
+
+            @include xxl {
+              font-size: 14px;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        .TokensContainer {
+          width: 100%;
+          height: 350px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          overflow: auto;
+
+          @include md {
+            height: 400px;
+            min-height: 200px;
+          }
+
+          @include lg {
+            max-height: 300px;
+          }
+
+          @include xl {
+            max-height: 400px;
+          }
+
+          @include xxl {
+            height: 450px;
+            max-height: 450px;
+          }
+
+          .LoaderContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

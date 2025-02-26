@@ -1,0 +1,568 @@
+@import "../../../../../../app/mixin.scss";
+
+.SlippageModalWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    outline: none;
+
+    @include md {
+        bottom: unset;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .SlippageUniV2Container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 18px;
+        z-index: 4;
+        width: 100vw;
+        height: auto;
+        background: var(--paper-black);
+        border: 2px solid var(--border-color);
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+        box-sizing: border-box;
+        gap: 18px;
+
+        @include md {
+            gap: 16px;
+            padding: 16px;
+            width: 330px;
+        }
+
+        @include lg {
+            gap: 16px;
+            padding: 16px;
+            width: 330px;
+        }
+
+        @include xl {
+            gap: 20px;
+            padding: 18px;
+            width: 380px;
+        }
+
+        @include xxl {
+            gap: 22px;
+            padding: 22px;
+            width: 400px;
+        }
+
+        .SlippageHeadingContainer {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+            .BackBtn {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 8px;
+                gap: 8px;
+                width: 35px;
+                height: 35px;
+                background: var(--paper-black-medium);
+                border: 1px solid var(--border-color);
+                border-radius: 6px;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                transition: all 0.2s ease-in-out;
+                transform: scale(1);
+                cursor: pointer;
+
+                @include md {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                @include lg {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                @include xl {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                @include xxl {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &:hover {
+                    transform: scale(0.9);
+                    opacity: 0.8;
+                }
+            }
+
+            .HeadingText {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 22px;
+
+                @include md {
+                    font-size: 17px;
+                }
+
+                @include lg {
+                    font-size: 17px;
+                }
+
+                @include xl {
+                    font-size: 22px;
+                }
+
+                @include xxl {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .SlippageDetails {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .ToggleSwitch {
+                width: 60px;
+                height: 36px;
+                background: var(--border-color);
+                border-radius: 18px;
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                cursor: pointer;
+
+                @include md {}
+
+                @include lg {
+                    width: 50px;
+                    height: 26px;
+                }
+
+                @include xl {
+                    width: 50px;
+                    height: 26px;
+                }
+
+                @include xxl {
+                    width: 60px;
+                    height: 36px;
+                }
+
+                .SwitchCircle {
+                    width: 24px;
+                    height: 24px;
+                    background-color: #3d3d3d;
+                    border-radius: 50%;
+                    transition: all 0.1s ease-in-out;
+
+                    @include md {}
+
+                    @include lg {
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                    @include xl {
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                    @include xxl {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+
+            .DetailsContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                @include md {}
+
+                @include lg {
+                    gap: 5px;
+                }
+
+                @include xl {
+                    gap: 8px;
+                }
+
+                @include xxl {
+                    gap: 10px;
+                }
+
+                .DetailText {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: #FFFFFF;
+
+                    @include md {}
+
+                    @include lg {
+                        font-size: 13px;
+                    }
+
+                    @include xl {
+                        font-size: 16px;
+                    }
+
+                    @include xxl {
+                        font-size: 18px;
+                    }
+                }
+
+                .DetailSubText {
+                    width: 257px;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #909090;
+
+                    @include md {}
+
+                    @include lg {
+                        width: auto;
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+
+                    @include xl {
+                        width: 257px;
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+
+                    @include xxl {
+                        width: 257px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+
+        .SlippageAutomaticInputContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+
+            @include md {
+                gap: 15px;
+            }
+
+            @include lg {
+                gap: 15px;
+            }
+
+            @include xl {
+                gap: 18px;
+            }
+
+            @include xxl {
+                gap: 20px;
+            }
+
+            .SlippageValueContainer {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .SlippageText {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+
+                    @include md {
+                        font-size: 13px;
+                    }
+
+                    @include lg {
+                        font-size: 13px;
+                    }
+
+                    @include xl {
+                        font-size: 16px;
+                    }
+
+                    @include xxl {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            hr {
+                border: 1px solid var(--border-color);
+            }
+
+            .SlippageButtonContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                .SlippageButton {
+                    width: fit-content;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 8px 10px;
+                    gap: 8px;
+                    border: 1px solid var(--border-color);
+                    border-radius: 36px;
+                    flex: none;
+                    order: 1;
+                    flex-grow: 1;
+                    transition: all 0.1s ease-in-out;
+                    cursor: pointer;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: #CFCFCF;
+
+
+                    @include md {
+                        padding: 8px 8px;
+                        font-size: 12px;
+                    }
+
+                    @include lg {
+                        padding: 8px 8px;
+                        font-size: 12px;
+                    }
+
+                    @include xl {
+                        padding: 8px 10px;
+                        font-size: 14px;
+                    }
+
+                    @include xxl {
+                        padding: 8px 12px;
+                        font-size: 16px;
+                    }
+
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .CustomSlippageButton {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-block: 8px;
+                width: 100%;
+                border: 1px solid var(--border-color);
+                transition: all 0.1s ease-in-out;
+                cursor: pointer;
+                border-radius: 40px;
+                color: #CFCFCF;
+                font-size: 14px;
+
+                @include md {
+                    font-size: 12px;
+                }
+
+                @include lg {
+                    font-size: 12px;
+                }
+
+                @include xl {
+                    font-size: 14px;
+                }
+
+                @include xxl {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+        }
+
+        .SlippageManualInputContainer {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px;
+            width: 100%;
+            background: var(--paper-black-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+            color: #CFCFCF;
+            position: relative;
+
+            @include md {
+                padding: 12px;
+                font-size: 12px;
+            }
+
+            @include lg {
+                padding: 12px;
+                font-size: 12px;
+            }
+
+            @include xl {
+                padding: 14px;
+                font-size: 14px;
+            }
+
+            @include xxl {
+                padding: 16px;
+                font-size: 16px;
+            }
+
+            .ContainerLabel {
+                position: absolute;
+                top: -12px;
+                left: 4%;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                color: #909090;
+
+                @include md {
+                    font-size: 8px;
+                    top: -12px;
+                    left: 4%;
+                }
+
+                @include lg {
+                    font-size: 8px;
+                    top: -12px;
+                    left: 4%;
+                }
+
+                @include xl {
+                    font-size: 10px;
+                    top: -12px;
+                    left: 4%;
+                }
+
+                @include xxl {
+                    font-size: 12px;
+                    top: -12px;
+                    left: 4%;
+                }
+
+            }
+
+
+            .Slippage-Input {
+                width: 70%;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 22px;
+                color: #CFCFCF;
+                background: transparent;
+                outline: none;
+                border: none;
+
+                @include md {
+                    font-size: 12px;
+                }
+
+                @include lg {
+                    font-size: 12px;
+                }
+
+                @include xl {
+                    font-size: 14px;
+                }
+
+                @include xxl {
+                    font-size: 16px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .SlippageCloseBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            gap: 8px;
+            width: 100%;
+            height: 50px;
+            background: var(--border-color);
+            border-radius: 6px;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+            cursor: pointer;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            color: #FFFFFF;
+
+            @include md {
+                font-family: 'ManropeMedium';
+                height: 40px;
+                font-size: 14px;
+            }
+
+            @include lg {
+                height: 40px;
+                font-size: 14px;
+            }
+
+            @include xl {
+                height: 50px;
+                font-size: 16px;
+            }
+
+            @include xxl {
+                height: 60px;
+                font-size: 18px;
+            }
+        }
+    }
+}

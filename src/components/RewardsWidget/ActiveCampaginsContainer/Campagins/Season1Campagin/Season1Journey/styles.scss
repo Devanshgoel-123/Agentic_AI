@@ -1,0 +1,300 @@
+@import "../../../../../../app/mixin.scss";
+
+
+.EddyJourneyWrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    width: 90%;
+    border-radius: 12px;
+    background-color: #111111;
+    border: 2px solid #1e1e1e;
+    @include md{
+        width: 70%;
+    }
+    @include lg{
+        width: 50%;
+    }
+    @include xl{
+        width: 45%;
+    }
+    @include xxl{
+        width: 30%;
+    }
+    gap: 5px;
+    z-index: 4;
+     .Season1CampaignContainerEddyJourney{
+        padding: 22px;
+        width: 100%;
+        position: relative;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #111111;
+        background: linear-gradient(#111111, rgba(17, 17, 17, 1.2)), url("/assets/images/reward_2.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:contain;
+        gap: 15px;
+        border-radius: 12px;
+        font-size: 16px;
+        @include md{
+            gap: 2px;
+            font-size: 18px;   
+        }
+        @include lg{
+            gap: 15px;
+        }
+        @include xl{
+            font-size: 20px;
+        }
+        @include xxl{
+            font-size: 22px;
+        }
+        .HeadingBtn {
+            width: 30px;
+            position: absolute;
+            right: 22px;
+            height: 30px;
+            background: var(--paper-black-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            @include lg{
+                width: 35px;
+                height: 35px;
+            }
+        }
+        }
+
+    .TableContainer{
+        display: flex;
+        padding: 22px;
+        flex-direction: column;
+        width: 100%;
+        .TableHeading{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            :nth-child(1){
+                width: 50%;
+                padding: 12px 8px;
+                display: flex;
+                justify-content: center;  
+                font-size: 10px;
+                border-top-left-radius: 8px;
+                border:1px solid #6b6b6b;
+                border-right: 0;
+                @include md{
+                    font-size: 16px;
+                }
+                @include xxl{
+                    font-size: 18px;
+                }
+            }
+            :nth-child(2){
+                width: 50%;
+                padding: 12px 8px;
+                display: flex;
+                justify-content: center;  
+                font-size: 10px;
+                border-top-right-radius: 8px;
+                border:1px solid #6b6b6b;
+                @include md{
+                    font-size: 16px;
+                }
+                @include xxl{
+                    font-size: 18px;
+                }
+            }           
+        }
+        .TableContent{
+            display: flex;
+            flex-direction: row;
+            background: url("/assets/images/reward_2.svg");
+            background-repeat: no-repeat;
+            background-color: #111111;
+            background-position:center ;
+            background-size:contain;
+            .TableColumnLeft{
+                border: 1px solid #6b6b6b;
+                border-bottom-left-radius: 8px;
+                border-right: 0;
+            }
+            .TableColumnRight{
+                border: 1px solid #6b6b6b;
+                border-bottom-right-radius: 8px;
+            }
+            .TableColumnLeft,.TableColumnRight{
+                    list-style: none;
+                    padding: 16px 16px;
+                    text-decoration: none;
+                    width: 50%;
+                    display: flex;
+                    border-top: none;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 5px;
+            }
+             .eddyScore{
+                        font-weight: 500;
+                        cursor: pointer;
+                        line-height: 20px;
+                        transition: all 0.1s ease-in-out;
+                        color: #c9c9c9;
+                        font-size: 8px;
+                        @include md {
+                            font-size: 15px;
+                            height: 30px;
+                        }
+                        @include lg {
+                            font-size: 15px;
+                        }
+                        @include xl {
+                            font-size: 14px;
+                        }
+                        @include xxl{
+                            font-size: 16px;
+                        }
+                    }
+            .pointsText{ 
+                       font-weight: 500;
+                        cursor: pointer;
+                        line-height: 20px;
+                        transition: all 0.1s ease-in-out;
+                        color: #c9c9c9;
+                        font-size: 8px;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 2px;
+                        :nth-child(1){
+                            color: #7BF179;
+                        }
+                        @include md {
+                            font-size: 15px;
+                            gap: 5px;
+                            height: 30px;
+                        }
+                        @include lg {
+                            font-size: 15px;
+                        }
+                        @include xl {
+                            font-size: 14px;
+                        }
+                        @include xxl{
+                            font-size: 16px;
+                        }
+            }
+        }
+    }
+        .EddyJourneyModalContainer{
+            padding: 32px;
+            background-color: #111111;
+            border: 2px solid #1e1e1e;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border-radius: 12px;
+            @include md{
+                padding: 26px;
+            }
+            .JourneyDetailsContainer{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .PointsWrapper{
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    @include md{
+                        gap: 10px;
+                    }
+                    
+                    .ScoreContainer{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        background-color: #101010;
+                        padding-block: 0px;
+                        gap: 5px;
+                        width: 100%;
+                        justify-content: space-between;
+                        @include md{
+                        padding-block: 5px;
+                        }
+                        @include lg{
+                        padding-block: 2px;
+                        }
+                    }
+                   
+                    
+                }
+                
+                .textBox{
+                    font-size: 12px;
+                    font-family: "Manrope";
+                    color: #e6e6e6;
+                    @include lg{
+                        font-size: 12px;
+                    }
+                    @include xl{
+                        font-size: 14px;
+                    }
+                }
+                .ActionBtn {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    font-family: "Manropebold";
+                    height: 36px;
+                    background: #7BF179;
+                    border: 0.72px solid #7BF179;
+                    border-radius: 6px;
+                    font-family: 'Manrope';
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 28px;
+                    color: #323227;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    @include md{
+                        font-size: 18px;
+                        padding: 12px 16px;
+                        height: 52px;
+                    }
+                    @include lg{
+                        height: 40px;
+                    }
+                    @include xl{
+                        height: 52px;
+                    }
+                    &:hover {
+                        background: var(--app-light-green);
+                        transform: scale(1.05);
+                    }
+        
+                    &:active {
+                        background: var(--text-white);
+                        
+                    }
+                }
+            }
+        }
+
+   
+}

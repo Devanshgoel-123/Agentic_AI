@@ -1,0 +1,17 @@
+@import "../../../../../../app/mixin.scss";
+
+.RemoveLiquidityModalWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    outline: none;
+    width: 100%;
+
+    @include md {
+        bottom: unset;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: unset;
+    }
+}

@@ -1,0 +1,103 @@
+@import "../../../app/mixin.scss";
+
+.ModalHeadingWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include md {}
+
+    @include lg {
+        gap: 8px;
+    }
+
+    @include xl {
+        gap: 10px;
+    }
+
+    @include xxl {
+        gap: 15px;
+    }
+
+    .ModalHeadingContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .HeadingText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+
+            @include md {
+                font-size: 20px;
+            }
+
+            @include lg {
+                font-size: 16px;
+            }
+
+            @include xl {
+                font-size: 20px;
+            }
+
+            @include xxl {
+                font-size: 24px;
+            }
+
+        }
+
+
+        .HeadingBtn {
+            width: 35px;
+            height: 35px;
+            background: var(--paper-black-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-white);
+            transition: all 0.2s ease-in-out;
+            transform: scale(1);
+
+            @include md {}
+
+            @include lg {
+                width: 30px;
+                height: 30px;
+                padding: 8px;
+            }
+
+            @include xl {
+                width: 35px;
+                height: 35px;
+                padding: 8px;
+            }
+
+            @include xxl {
+                width: 40px;
+                height: 40px;
+                padding: 10px;
+            }
+
+            &:hover {
+                opacity: 0.8;
+                transform: scale(0.95);
+            }
+        }
+
+    }
+
+    hr {
+        border: 1px solid var(--border-color);
+    }
+}

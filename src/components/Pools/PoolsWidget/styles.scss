@@ -1,0 +1,200 @@
+@import "../../../app/mixin.scss";
+
+.PoolsWidgetWrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include md {
+        max-width: 1200px;
+        width: 90%;
+        gap: 12px;
+    }
+
+    @include lg {
+        width: 80%;
+        gap: 12px;
+    }
+
+    @include xl {
+        gap: 15px;
+    }
+
+    @include xxl {
+        gap: 20px;
+        width: 70%;
+    }
+
+    .MobilePoolsHeader {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        background: linear-gradient(95.86deg, #999999 -20.23%, #FFFFFF 74.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        width: fit-content;
+        margin-bottom: 10px;
+
+
+        @include md {
+            display: none;
+        }
+    }
+
+    .PoolsHeadingContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .SearchWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            .SearchContainer {
+                box-sizing: border-box;
+                display: none;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 10px 14px;
+                border: 1px solid #1E1E1E;
+                border-radius: 8px;
+                width: 100%;
+                gap: 10px;
+
+                @include md {
+                    width: 300px;
+                    display: flex;
+                    padding: 10px 14px;
+                }
+
+                @include lg {
+                    padding: 10px 14px;
+                }
+
+                @include xl {
+                    padding: 10px 14px;
+                }
+
+                @include xxl {
+                    padding: 12px 16px;
+                }
+
+                .SearchIcon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 18px;
+                    height: 18px;
+
+                    @include md {}
+
+                    @include lg {
+                        width: 14px;
+                        height: 14px;
+                    }
+
+                    @include xl {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    @include xxl {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+
+                .SearchInput {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: var(--text-medium-grey);
+                    background: transparent;
+                    outline: none;
+                    border: none;
+
+                    @include md {}
+
+                    @include lg {
+                        font-size: 12px;
+                    }
+
+                    @include xl {
+                        font-size: 13px;
+                    }
+
+                    @include xxl {
+                        font-size: 14px;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .FilterContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+
+
+
+        .ManageButton {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 22px;
+            background: #7BF179;
+            border-radius: 8px;
+            font-family: 'ManropeBold';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            color: #323227;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+
+            @include md {}
+
+            @include lg {
+                padding: 8px 20px;
+                font-size: 12px;
+            }
+
+            @include xl {
+                padding: 10px 22px;
+                font-size: 14px;
+            }
+
+            @include xxl {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+
+            &:hover {
+                background: var(--app-light-green);
+            }
+
+            &:active {
+                background: var(--text-white);
+            }
+        }
+    }
+}

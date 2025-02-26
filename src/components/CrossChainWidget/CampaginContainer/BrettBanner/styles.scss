@@ -1,0 +1,164 @@
+@import "../../../../app/mixin.scss";
+
+.BrettBannerContainer {
+    width: 100%;
+    height: 100%;
+    padding-inline: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    background-position: center;
+    background-size: cover;
+    background: url("/assets/images/brett_bg.svg");
+    background-repeat: no-repeat;
+    @include md {}
+
+    @include lg {
+        padding-inline: 15px;
+    }
+
+    @include xl {
+        padding-inline: 15px;
+    }
+
+    @include xxl {
+        padding-inline: 24px;
+    }
+
+    .TokenContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       .Logo1{
+            position: relative;
+            z-index: 3;
+            transform: rotate(-11.5deg);
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 47px;
+            height: 47px;
+            border-radius: 100%;
+            overflow: hidden;
+            @include md {}
+            .degenImage{
+                height: 100%;
+                width: 100%;
+                border-radius: 100%;
+            }
+            @include lg {
+                width: 37px;
+                height: 37px;
+            }
+
+            @include xl {
+                width: 47px;
+                height: 47px;
+            }
+
+            @include xxl {
+                width: 57px;
+                height: 57px;
+            }
+        }
+        .Logo2{
+            position: relative;
+            z-index: 4;
+            left: -10px;
+            transform: rotate(0.14deg);
+            position: relative;
+            border-radius: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 47px;
+            height: 47px;
+            border-radius: 100%;
+            @include md {}
+            .degenImage{
+                height: 100%;
+                width: 100%;
+                border-radius: 100%;
+            }
+            @include lg {
+                width: 37px;
+                height: 37px;
+            }
+
+            @include xl {
+                width: 47px;
+                height: 47px;
+            }
+
+            @include xxl {
+                width: 57px;
+                height: 57px;
+            }
+        }
+
+    }
+
+    .BannerText {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 2px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        text-align: right;
+        justify-content: flex-start;
+        align-items: flex-end;
+        color: #E0E0E0;
+        :nth-child(1){
+            width: 100%;
+        }
+        :nth-child(2){
+            width: 100%;
+            font-size: 9px;
+            @include md{
+                font-size: 10px;
+            }
+            @include xl{
+                font-size: 12px;
+            }
+            @include xxl{
+                font-size: 14px;
+            }
+        }
+        .bannerHeader {
+            color: #044de4;
+            font-family: "ManropeBold";
+            font-weight: 700;
+            display: inline-block;
+            text-align: right;
+            width: 100%;
+            font-size: 13px;
+            @include md{
+                font-size: 14px;
+            }
+            @include lg{
+                font-size: 14px;
+            }
+            @include xl{
+                font-size: 17x;
+            }
+            @include xxl{
+                font-size: 20px;
+            }
+        }
+        .bannerTokenName{
+            color: #AE90E9;
+            font-family: "ManropeMedium";
+            font-weight: 700;
+        }
+        .baseText{
+            color: #044de4;
+            font-family: "Manropebold";
+            font-weight: 800;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+@import "../../app/mixin.scss";
+
+.SideNavigationWrapper {
+    position: absolute;
+    padding-block: 35px;
+    padding-inline: 30px;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+    z-index: 3;
+
+    @include md {}
+
+    @include lg {
+        padding-block: 25px;
+        padding-inline: 20px;
+    }
+
+    @include xl {
+        padding-block: 35px;
+        padding-inline: 30px;
+    }
+
+    @include xxl {
+        padding-block: 35px;
+        padding-inline: 30px;
+    }
+
+
+    .SideNavigationContainer {
+        padding: 18px;
+        width: calc-size(auto);
+        padding-block: 18px;
+        height: 100%;
+        background: var(--paper-black);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
+        position: relative;
+
+
+        @include md {}
+
+        @include lg {
+            padding: 12px;
+            padding-block: 12px;
+        }
+
+        @include xl {
+            padding: 18px;
+            padding-block: 18px;
+        }
+
+        @include xxl {
+            padding: 18px;
+            padding-block: 18px;
+        }
+
+        .PinBtn {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            gap: 8px;
+            position: absolute;
+            top: 100px;
+            right: -18px;
+            width: 36px;
+            height: 36px;
+            background: var(--paper-black-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            cursor: pointer;
+
+            @include md {}
+
+            @include lg {
+                top: 70px;
+                right: -18px;
+                width: 30px;
+                height: 30px;
+            }
+
+            @include xl {
+                top: 100px;
+                right: -18px;
+                width: 36px;
+                height: 36px;
+            }
+
+            @include xxl {
+                top: 100px;
+                right: -18px;
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        .LogoContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'ManropeBold';
+            gap: 10px;
+            font-size: 16px;
+
+            @include md {}
+
+            @include lg {
+                gap: 8px;
+                font-size: 14px;
+            }
+
+            @include xl {
+                gap: 10px;
+                font-size: 16px;
+            }
+
+            @include xxl {
+                gap: 10px;
+                font-size: 16px;
+            }
+
+            .EddyLogo {
+                width: 36px;
+                height: 36px;
+
+                @include md {}
+
+                @include lg {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                @include xl {
+                    width: 36px;
+                    height: 36px;
+                }
+
+                @include xxl {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+
+        .LinksWrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .SocialsWrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
+}

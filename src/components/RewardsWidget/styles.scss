@@ -1,0 +1,40 @@
+@import "../../app/mixin.scss";
+.RewardsWidgetWrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+   
+    gap: 20px;
+    @include md{
+        width: 95%;
+    }
+    @include lg{
+        width: 70%;
+    }
+    @include xl{
+        width: 65%;
+    }
+    @include xxl{
+        width: 50%;
+    }
+   .PointsStateWrapper{
+    position: relative;
+   }
+  
+}
+.DynamicPlaceholderRewards {
+    width: 500px;
+    min-height: 300px;
+    background: var(--paper-black-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.DynamicPlaceholderRewardsTopContainer {
+    width: 500px;
+    min-height: 500px;
+    height: 500px;
+    background: var(--paper-black-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}

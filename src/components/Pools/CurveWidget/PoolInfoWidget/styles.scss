@@ -1,0 +1,315 @@
+@import "../../../../app/mixin.scss";
+
+.PoolsInfoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+
+    @include md {
+        width: 250px;
+        gap: 13px;
+    }
+
+    @include lg {
+        width: 250px;
+        gap: 13px;
+    }
+
+    @include xl {
+        width: 280px;
+        gap: 15px;
+    }
+
+    @include xxl {
+        width: 344px;
+        gap: 20px;
+    }
+
+    .PoolLpTokenContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 18px;
+        background: radial-gradient(63.94% 63.94% at 100% 100%, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+        border: 2px solid #1E1E1E;
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+
+        @include md {
+            padding: 16px;
+            gap: 14px;
+        }
+
+        @include lg {
+            padding: 16px;
+            gap: 14px;
+        }
+
+        @include xl {
+            padding: 18px;
+            gap: 15px;
+        }
+
+        @include xxl {
+            padding: 24px;
+            gap: 16px;
+        }
+
+        .Label {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            text-align: center;
+            color: #909090;
+
+            @include md {
+                font-size: 11px;
+            }
+
+            @include lg {
+                font-size: 11px;
+            }
+
+            @include xl {
+                font-size: 12px;
+            }
+
+            @include xxl {
+                font-size: 14px;
+            }
+        }
+
+        .LpTokenInfo {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .LpTokenLogo {
+                width: 18px;
+                height: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include md {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                @include lg {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                @include xl {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                @include xxl {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .LpTokenValue {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                text-align: center;
+                color: #FFFFFF;
+
+
+                @include md {
+                    font-size: 12px;
+                }
+
+                @include lg {
+                    font-size: 12px;
+                }
+
+                @include xl {
+                    font-size: 14px;
+                }
+
+                @include xxl {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .PoolDetailContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px;
+        gap: 15px;
+        width: 100%;
+        background: radial-gradient(63.94% 63.94% at 100% 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+        border: 2px solid #1E1E1E;
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+
+
+        @include md {
+            padding: 16px;
+            gap: 14px;
+        }
+
+        @include lg {
+            padding: 16px;
+            gap: 14px;
+        }
+
+        @include xl {
+            padding: 18px;
+            gap: 15px;
+        }
+
+        @include xxl {
+            padding: 24px;
+            gap: 16px;
+        }
+
+        .PoolDetailLabel {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+
+            .Label {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                text-align: center;
+                color: #909090;
+
+                @include md {
+                    font-size: 11px;
+                }
+
+                @include lg {
+                    font-size: 11px;
+                }
+
+                @include xl {
+                    font-size: 12px;
+                }
+
+                @include xxl {
+                    font-size: 14px;
+                }
+            }
+
+            .DetailValue {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                .Value {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    text-align: center;
+                    color: #FFFFFF;
+
+
+                    @include md {
+                        font-size: 18px;
+                    }
+
+                    @include lg {
+                        font-size: 18px;
+                    }
+
+                    @include xl {
+                        font-size: 20px;
+                    }
+
+                    @include xxl {
+                        font-size: 24px;
+                    }
+                }
+
+                .BoostedAPY {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 0px 6px 0px 2px;
+                    gap: 4px;
+                    background: rgba(88, 88, 88, 0.3);
+                    border-radius: 26px;
+
+                    .BoostedToken {
+                        width: 20px;
+                        height: 20px;
+
+                        @include md {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        @include lg {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        @include xl {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        @include xxl {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+
+                    .InfoLogo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 15px;
+                        height: 15px;
+                    }
+
+                    .BoostedValue {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: #FFFFFF;
+
+
+                        @include md {
+                            font-size: 12px;
+                        }
+
+                        @include lg {
+                            font-size: 12px;
+                        }
+
+                        @include xl {
+                            font-size: 14px;
+                        }
+
+                        @include xxl {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}

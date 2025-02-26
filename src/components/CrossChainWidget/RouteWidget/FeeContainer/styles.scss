@@ -1,0 +1,49 @@
+@import "../../../../app/mixin.scss";
+
+.FeeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+
+    @include md {}
+
+    @include lg {
+        gap: 8px;
+    }
+
+    @include xl {
+        gap: 10px;
+    }
+
+    @include xxl {
+        gap: 12px;
+    }
+
+    .FeeHeading {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+
+        @include md {}
+
+        @include lg {
+            font-size: 14px;
+        }
+
+        @include xl {
+            font-size: 16px;
+        }
+
+        @include xxl {
+            font-size: 18px;
+        }
+    }
+
+    .FeeDetailContainer {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+}

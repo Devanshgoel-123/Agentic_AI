@@ -1,0 +1,136 @@
+@import "../../../../app/mixin.scss";
+
+.RewardPointsContainer{
+     display: flex;
+     flex-direction: column;
+     row-gap: 10px;
+     font-family: 'ManropeMedium';
+     width: 100%;
+     @include xl{
+        row-gap: 5px;
+     }
+     @include xxl{
+        row-gap: 10px;
+     }
+    }
+    .eddyScore{
+        font-weight: 500;
+        cursor: pointer;
+        line-height: 16px;
+        transition: all 0.1s ease-in-out;
+        color: var(--text-dense-grey-dark);
+        @include md {
+            font-size: 12px;
+        }
+    
+        @include lg {
+            font-size: 12px;
+        }
+    
+        @include xl {
+            font-size: 14px;
+        }
+    
+        @include xxl {
+            font-size: 16px;
+        }
+    }
+    .scoreContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 16px;
+        padding-block: 10px;
+        border: 2px solid var(--border-color);
+        border-radius: 12px;
+        width: 100%;
+       
+    }
+    .pointsText{
+        color: var(--app-green);
+        @include md{
+            font-size: 14px;
+        }
+        @include lg{
+            font-size: 14px;
+        }
+        @include xl{
+            font-size: 14px;
+        }
+        @include xxl{
+            font-size: 20px;
+        }
+    }
+    .scoreText{
+        @include md{
+            font-size: 14px;
+        }
+        @include lg{
+            font-size: 14px;
+        }
+        @include xl{
+            font-size: 14px;
+        }
+        @include xxl{
+            font-size: 20px;
+        }
+    }
+    
+
+.multiplierContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 11px;
+    padding-block: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    column-gap: 17px;
+    @include lg{
+        display: none;
+    }
+    @include xl{
+        display: flex;
+    }
+}
+.subMultiplierContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding-inline: 4px;
+}
+.multiplierText{
+    font-weight: 200;
+    color: var(--text-dense-grey-dark);
+    line-height: 0.8rem;
+    @include md{
+        font-size: 10px;
+    }
+    @include lg{
+        font-size: 10px;
+    }
+    @include xl{
+        font-size: 12px;
+    }
+    
+}
+.subMultiplierText{
+    font-size: 10px;
+    line-height: 10px;
+    font-family: 400;
+    
+}
+.subMultiplierText2{
+    font-weight: 700;
+    line-height: 24px;
+   
+    @include md{
+        font-size: 22px;
+    }
+    @include lg{
+        font-size: 18px;
+    }
+    @include xl{
+        font-size: 22px;
+    }
+}

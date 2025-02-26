@@ -1,0 +1,187 @@
+@import "../../../app/mixin.scss";
+
+.SprintsContainer {
+    width: 100%;
+    background-color: #0D0D0D;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    .TabsContainer {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        
+        @include md{
+           justify-content: flex-start;
+           gap: 15px;
+            border-bottom: 1px solid #757575;
+            padding-inline: 35px;
+        }
+        @include lg{
+            justify-content: space-around;
+            padding-inline: 35px;
+        }
+        @include xl{
+            padding-inline: 40px;
+        }
+        .Tab {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: #757575;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            @include md{
+                font-size: 14px;
+            }
+            @include lg{
+                width: 20%;
+            }
+            &:hover {
+                transform: scale(0.9);
+                opacity: 0.8;
+            }
+        }
+
+        .ActiveTab {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            border-bottom: 1px solid var(--app-green);
+        color: var(--app-green);
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            @include md{
+                font-size: 14px;
+                width: 20%;
+            }
+        }
+    }
+    .TabHeadingMobile{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        padding: 12px;
+        display: flex;
+        padding-bottom: 0;
+        .ActiveTab {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            padding: 18px;
+            width: 100%;
+            border: 1px solid #3a3a3a;
+            border-radius: 8px;
+            color: #FEFEFE;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            .downIcon{
+                font-size: 18px;
+            }
+        }   
+        .DropdownContainerWrapper{
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width:100%;
+            z-index: 4;
+            background-color: #0D0D0D;
+            left: 0;
+            top: 0;
+            padding: 12px;
+            padding-bottom: 20px;
+            transition: all 0.3s ease-in-out;
+            .dropdownContainer{
+                padding: 12px;
+                width: 100%;
+                border: 1px solid #3a3a3a;
+                gap: 10px;
+                border-radius: 8px;
+                .upIcon{
+                    margin-top: 3px;
+                    font-size: 18px;
+                }
+                .NavigationLink{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding-block: 8px;
+                    font-size: 16px;
+                    border-bottom: 1px solid #3a3a3a;
+                }
+                .LastLink{
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+            
+        }     
+    }
+    .NoTaskDisplay{
+        background-color: #0D0D0D;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .SprintsBottomContainer{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        min-height: 200px;
+        background-color: #0d0d0d;
+        justify-content: center;
+        align-items: center;
+        .ActiveSprints {
+            width: 100%;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+            gap: 10px;
+            @include md{
+                padding: 30px;
+                gap: 15px;
+            }
+            @include lg{
+                padding-inline:35px ;
+            }
+            @include xl{
+                padding-inline: 40px;
+            }
+        }
+    }
+    .InActive{
+        opacity: 0.5;
+       filter: blur(5px);
+        pointer-events: none;
+        transition: all 0.3s ease; 
+    }
+
+    
+}

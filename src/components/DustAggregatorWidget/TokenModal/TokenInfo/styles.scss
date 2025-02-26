@@ -1,0 +1,164 @@
+@import "../../../../app/mixin.scss";
+
+.TokenInfoDust{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    background: linear-gradient(0deg, #101010, #101010), #101010;
+    border: 1px solid #1E1E1E;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: linear-gradient(106.18deg, rgba(88, 88, 88, 0.04) -108.53%, #121212 86.85%), #101010;
+    }
+
+    .TokenInfoContainerBoxDust {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+         @include lg{
+            gap: 5px;
+         }
+        .TokenLogo {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            @include md {
+                width: 24px;
+                height: 24px;
+            }
+
+            @include lg {
+                width: 24px;
+                height: 24px;
+            }
+
+            @include xl {
+                width: 28px;
+                height: 28px;
+            }
+
+            @include xxl {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .TokenDetailsBoxDust {
+            display: flex;
+            flex-direction: column;
+
+            .TokenNameDust {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                color: var(--text-white);
+                @include md {
+                    font-size: 12px;
+                }
+
+                @include lg {
+                    font-size: 11px;
+                }
+
+                @include xl {
+                    font-size: 14px;
+                }
+
+                @include xxl {
+                    font-size: 16px;
+                }
+            }
+
+            .ChainNameDust {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                transition: all 0.1s ease-in-out;
+                color: #B3B3B3;
+    
+                @include md {
+                    font-size: 8px;
+                }
+    
+                @include lg {
+                    font-size: 8px;
+                }
+    
+                @include xl {
+                    font-size: 10px;
+                }
+    
+                @include xxl {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .LoaderTextDust{
+        display: flex;
+        flex-direction: column;
+    }
+    .TokenBalanceContainerDust{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        
+    }
+    .TokenBalanceDust {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+        @include md {
+            font-size: 12px;
+        }
+
+        @include lg {
+            font-size: 11px;
+        }
+
+        @include xl {
+            font-size: 14px;
+        }
+
+        @include xxl {
+            font-size: 16px;
+        }
+    }
+
+    .TokenDollarValueDust{
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        color: #B3B3B3;
+        @include md {
+            font-size: 8px;
+        }
+
+        @include lg {
+            font-size: 8px;
+        }
+
+        @include xl {
+            font-size: 10px;
+        }
+
+        @include xxl {
+            font-size: 12px;
+        }
+    }
+}

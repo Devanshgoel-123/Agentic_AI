@@ -1,0 +1,50 @@
+@import "../../../../app/mixin.scss";
+
+
+.ProgressContainerTracking{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0px 12px;
+    justify-content: flex-start;
+    font-family: 'ManropeMedium';
+    background-color: #1a1a1a;
+    width: 40%;
+    border-radius: 12px;
+    @include md{
+        width: 70%;
+        padding: 12px;
+    }
+    @include lg{
+        width: 50%;
+        font-size: 12px;
+    }
+    @include xl{
+        width: 40%;
+       gap: 5px;
+       font-size: 14px;
+    }
+    @include xxl{
+        width: 30%;
+        font-size: 16px;
+        gap: 10px;
+    }
+    .ProgressBarWrapper{
+        background-color: #ffffff;
+        height: 8px;
+        border-radius: 20px;
+        .ProgressBarFull{
+            height: 8px;
+            border-radius: 20px;
+            width: 100%;
+            background: repeating-linear-gradient(
+        115deg,
+        var(--app-green) 0,
+        var(--app-green) 2.5%,
+        #5FBF5D 2.5%,
+        #5FBF5D 5%         
+              );
+        }
+    }
+    
+}

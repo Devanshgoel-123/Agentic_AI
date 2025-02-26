@@ -1,0 +1,41 @@
+@import "../../../../../../app/mixin.scss";
+
+.TokenWrapper {
+    display: flex;
+    position: relative;
+
+    .Token {
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @include md {
+            width: 28px;
+            height: 28px;
+        }
+
+        @include lg {
+            width: 28px;
+            height: 28px;
+        }
+
+        @include xl {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include xxl {
+            width: 32px;
+            height: 32px;
+        }
+
+        &:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 40%;
+            z-index: 2;
+            overflow: hidden;
+        }
+    }
+}

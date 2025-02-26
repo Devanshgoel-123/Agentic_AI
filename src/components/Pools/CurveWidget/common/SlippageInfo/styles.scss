@@ -1,0 +1,96 @@
+@import "../../../../../app/mixin.scss";
+
+.SlippageInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .Label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        text-align: center;
+        color: #909090;
+
+        @include md {
+            font-size: 12px;
+        }
+
+        @include lg {
+            font-size: 12px;
+        }
+
+        @include xl {
+            font-size: 13px;
+        }
+
+        @include xxl {
+            font-size: 14px;
+        }
+
+        .SlippageEditIcon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 13px;
+            height: 13px;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+
+            @include md {
+                width: 12px;
+                height: 12px;
+            }
+
+            @include lg {
+                width: 12px;
+                height: 12px;
+            }
+
+            @include xl {
+                width: 13px;
+                height: 13px;
+            }
+
+            @include xxl {
+                width: 14px;
+                height: 14px;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .Value {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        text-align: center;
+        color: #FFFFFF;
+
+        @include md {
+            font-size: 12px;
+        }
+
+        @include lg {
+            font-size: 12px;
+        }
+
+        @include xl {
+            font-size: 13px;
+        }
+
+        @include xxl {
+            font-size: 14px;
+        }
+    }
+}

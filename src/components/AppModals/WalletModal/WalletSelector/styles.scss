@@ -1,0 +1,105 @@
+@import "../../../../app/mixin.scss";
+
+.WalletSelectorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 100%;
+
+    @include md {
+        padding: 8px;
+        width: auto;
+    }
+
+    .WalletSelector {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 8px;
+        background: var(--paper-black-medium);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        font-family: "Manrope";
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        width: 33%;
+        font-size: 16px;
+        color: var(--text-white-dark);
+
+        @include md {
+            width: auto;
+        }
+
+        @include lg {
+            font-size: 12px;
+        }
+
+        @include xl {
+            font-size: 14px;
+        }
+
+        @include xxl {
+            font-size: 16px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .WalletSelector-Selected {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 8px;
+        background-image: linear-gradient(106.18deg, rgba(88, 88, 88, 0.04) -108.53%, #121212 86.85%);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        font-family: "Manrope";
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        position: relative;
+        width: 33%;
+        font-size: 16px;
+        color: var(--text-white-dark);
+
+        @include md {
+            width: auto;
+        }
+
+        @include lg {
+            font-size: 12px;
+        }
+
+        @include xl {
+            font-size: 14px;
+        }
+
+        @include xxl {
+            font-size: 16px;
+        }
+
+        .SelectedLine {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 1px;
+            background-color: var(--app-green);
+            z-index: 2;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

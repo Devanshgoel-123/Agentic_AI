@@ -1,0 +1,164 @@
+@import "../../../app/mixin.scss";
+
+.DrawerWrapper {
+    width: 100vw;
+    height: 100%;
+    background: radial-gradient(63.94% 63.94% at 20% 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    padding-inline: 15px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    @include md {
+        width: 40vw;
+    }
+
+    .HeadingContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .LogoContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            text-align: center;
+            color: #F2F2F2;
+
+
+            .Logo {
+                width: 36px;
+                height: 36px;
+
+            }
+        }
+
+        .HeadingBtn {
+            width: 35px;
+            height: 35px;
+            background: var(--paper-black-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    .DrawerNavigationContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+
+        .DrawerNavigation {
+            width: 100%;
+            padding-block: 20px;
+            border-bottom: 1px solid #1e1e1e;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+
+           
+            .LogoIcon {
+                padding: 8px;
+                width: 35px;
+                height: 35px;
+                position: relative;
+                background: #121212;
+                border: 1px solid #1E1E1E;
+                border-radius: 4px;
+                color: var(--text-dense-grey-dark);
+                //background:linear-gradient(#303030 80% #121212 100%);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 0px;
+                    background-color: var(--app-green);
+                    transition: all 0.3s ease;
+                    opacity: 0.7;
+                }
+
+                &.show-line::before {
+                    height: 50%;
+                    
+                    
+                }
+            }
+
+            .LinkText {
+                color: #757575;
+            }
+
+           
+            .ComingSoonLabel {
+                font-size: 10px;
+                color: var(--app-green);
+                border: 1px solid var(--app-green);
+                padding: 2px 10px;
+                border-radius: 40px;
+                opacity: 0.6;
+
+                @include md {}
+
+                @include lg {
+                    font-size: 8px;
+                }
+
+                @include xl {
+                    padding: 2px 8px;
+                    font-size: 9px;
+                }
+
+                @include xxl {
+                    padding: 2px 10px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .SocialContainer {
+        padding-block: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
+        .SocialIcon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            background: #121212;
+            border: 1.18519px solid #1E1E1E;
+            border-radius: 5.33333px;
+            color: var(--text-dense-grey-dark);
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@import "../../app/mixin.scss";
+.AnalyticsPageWrapper {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    @include lg{
+        width: 80%;
+    }
+    .GraphWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .Heading {
+            font-size: 24px;
+        }
+
+        .GraphSection {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            @include md{
+                flex-direction: row;
+                height: 330px;
+            }
+           
+        }
+    }
+
+    .AnalyticsTableWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        min-height: 330px;
+        .Heading {
+            font-size: 24px;
+        }
+        
+    }
+    .AnalyticsTableMobileWrapper{
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        margin-bottom: 100px;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.DynamicPlaceholder {
+    width: 100%;
+    height: 80px;
+    background: var(--paper-black-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+

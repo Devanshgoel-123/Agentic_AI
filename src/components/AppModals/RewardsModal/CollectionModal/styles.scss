@@ -1,0 +1,69 @@
+@import "../../../../app/mixin.scss";
+
+.collectionModal{
+    width: 100%;
+    overflow: hidden;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .collectionHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 14px;
+        font-family: "ManropeMedium";
+        @include lg{
+            font-size: 14px;
+        }
+    }
+    .nftName{
+        font-size: 12px;
+    }
+    .collectionStatusBox{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    row-gap: 14px;
+    align-items: center;
+    width:100%;
+    background: radial-gradient(63.94% 63.94% at 20% 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    border: 2px solid var(--border-color);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    @include lg{
+        row-gap: 6px;
+    }
+    @include xxl{
+        row-gap: 10px;
+    }
+    }
+    .ClaimedBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 9px;
+        border-radius: 4px;
+        border: 1px solid var(--border-color);
+        background-color: var(--button-inactive);
+    }
+    .ClaimedText{
+        font-size: 11px;
+        font-weight: 400;
+        font-family:"Manrope";
+        line-height: 9px;
+        color: var(--app-green);
+    }
+    .NotClaimedText{
+        font-size: 11px;
+        font-weight: 400;
+        color: var(--text-white);
+        font-family: "Manrope";
+        line-height: 9px;
+    }
+}

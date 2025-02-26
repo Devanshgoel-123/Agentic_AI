@@ -1,0 +1,415 @@
+@import "../../../app/mixin.scss";
+
+.ReviewTransactionWrapper {
+    position: absolute;
+    bottom: 0;
+    outline: none;
+
+    @include md {
+        bottom: unset;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ReviewTransactionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 18px;
+        gap: 18px;
+        background: radial-gradient(63.94% 63.94% at 0 100%, hsla(0, 0%, 100%, .06) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+        border: 2px solid var(--border-color);
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+        width: 100vw;
+
+        @include md {
+            width: 330px;
+            padding: 18px;
+            gap: 18px;
+        }
+
+        @include lg {
+            width: 330px;
+            padding: 18px;
+            gap: 18px;
+        }
+
+        @include xl {
+            width: 400px;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        @include xxl {
+            width: 450px;
+            padding: 24px;
+            gap: 24px;
+        }
+
+        .HeadingWrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .HeadingContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                .BackBtn {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 8px;
+                    gap: 8px;
+                    width: 35px;
+                    height: 35px;
+                    background: var(--paper-black-medium);
+                    border: 1px solid var(--border-color);
+                    border-radius: 6px;
+                    transform: scale(1);
+                    transition: all 0.2s ease-in-out;
+                    cursor: pointer;
+                    color: var(--text-white);
+
+                    @include md {}
+
+                    @include lg {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    @include xl {
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    @include xxl {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    &:hover {
+                        transform: scale(0.9);
+                        opacity: 0.8;
+                    }
+
+                    &:active {
+                        transform: scale(0.8);
+                    }
+                }
+
+                .HeadingText {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    text-align: center;
+
+                    @include md {
+                        font-size: 16px;
+                    }
+
+                    @include lg {
+                        font-size: 16px;
+                    }
+
+                    @include xl {
+                        font-size: 18px;
+                    }
+
+                    @include xxl {
+                        font-size: 20px;
+                    }
+                }
+
+            }
+
+            .TimerContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                text-align: center;
+                color: var(--text-medium-grey);
+                width: 70px;
+                ;
+
+                @include md {}
+
+                @include lg {
+                    font-size: 16px;
+                    width: 70px;
+                }
+
+                @include xl {
+                    font-size: 18px;
+                    width: 75px;
+                }
+
+                @include xxl {
+                    font-size: 20px;
+                    width: 80px;
+                }
+
+                .TimerIcon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid var(--border-color);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transform: rotate(0deg);
+                    transition: all 0.1s ease-in-out;
+
+                    &:hover {
+                        transform: rotate(-30deg);
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        .QuoteDetailsContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @include md {
+                gap: 20px;
+            }
+
+            @include lg {
+                gap: 20px;
+            }
+
+            @include xl {
+                gap: 25px;
+            }
+
+            @include xxl {
+                gap: 30px;
+            }
+        }
+
+        .AmountsDetailsContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            @include md {
+                gap: 5px;
+            }
+
+            @include lg {
+                gap: 5px;
+            }
+
+            @include xl {
+                gap: 8px;
+            }
+
+            @include xxl {
+                gap: 10px;
+            }
+
+            .AmountsTile {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .AmountsLabel {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: var(--text-medium-grey);
+
+                    @include md {
+                        font-size: 10px;
+                    }
+
+                    @include lg {
+                        font-size: 10px;
+                    }
+
+                    @include xl {
+                        font-size: 12px;
+                    }
+
+                    @include xxl {
+                        font-size: 14px;
+                    }
+                }
+
+                .AmountValueContainer {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 10px;
+
+                    .AmountValue {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: var(--text-white);
+
+                        @include md {
+                            font-size: 10px;
+                        }
+
+                        @include lg {
+                            font-size: 10px;
+                        }
+
+                        @include xl {
+                            font-size: 12px;
+                        }
+
+                        @include xxl {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .ConversionLogo {
+                        width: 14px;
+                        height: 14px;
+
+                        @include md {
+                            width: 13px;
+                            height: 13px;
+                        }
+
+                        @include lg {
+                            width: 13px;
+                            height: 13px;
+                        }
+
+                        @include xl {
+                            width: 14px;
+                            height: 14px;
+                        }
+
+                        @include xxl {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+
+                    .TokenLogo {
+                        width: 18px;
+                        height: 18px;
+                        position: relative;
+                        cursor: pointer;
+
+
+                        @include md {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        @include lg {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        @include xl {
+                            width: 18px;
+                            height: 18px;
+                        }
+
+                        @include xxl {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        .ChainLogo {
+                            width: 7.3px;
+                            height: 7.3px;
+                            position: absolute;
+                            bottom: 0;
+                            right: -3px;
+                        }
+                    }
+
+                    .ArrowIcon {
+                        width: 12px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .InitiateTransactionBtn {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 16px;
+            gap: 8px;
+            height: 52px;
+            background: var(--app-green);
+            border-radius: 6px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+            color: var(--text-dark);
+            cursor: pointer;
+
+            @include md {
+                font-family: 'ManropeBold';
+                font-size: 12px;
+                height: 40px;
+            }
+
+            @include lg {
+                font-size: 12px;
+                height: 40px;
+            }
+
+            @include xl {
+                font-size: 16px;
+                height: 50px;
+            }
+
+            @include xxl {
+                font-size: 18px;
+                height: 52px;
+            }
+
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background: var(--app-light-green);
+            }
+
+            &:active {
+                background: var(--text-white);
+            }
+        }
+
+    }
+}

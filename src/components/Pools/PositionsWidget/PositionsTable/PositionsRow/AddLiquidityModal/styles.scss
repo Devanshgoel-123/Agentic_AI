@@ -1,0 +1,330 @@
+@import "../../../../../../app/mixin.scss";
+
+.AddLiquidityModalWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    outline: none;
+
+    @include md {
+        bottom: unset;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .AddLiquidityModal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 18px;
+        gap: 18px;
+        width: 100vw;
+        background: radial-gradient(63.94% 63.94% at 0 100%, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+        border: 2px solid #1E1E1E;
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+
+        @include md {
+            padding: 16px;
+            gap: 15px;
+            width: 330px;
+
+        }
+
+        @include lg {
+            padding: 16px;
+            gap: 15px;
+            width: 330px;
+
+        }
+
+        @include xl {
+            padding: 18px;
+            gap: 16px;
+            width: 380px;
+
+        }
+
+        @include xxl {
+            padding: 24px;
+            gap: 20px;
+            width: 440px;
+
+        }
+
+        .PoolInfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .PoolTokens {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+
+                .TokenLogo {
+                    width: 30px;
+                    height: 30px;
+
+                    @include md {}
+
+                    @include lg {
+                        width: 28px;
+                        height: 28px;
+
+                    }
+
+                    @include xl {
+                        width: 30px;
+                        height: 30px;
+
+                    }
+
+                    @include xxl {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+
+            .PoolNameContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .PoolName {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: #FFFFFF;
+
+
+                    @include md {}
+
+                    @include lg {
+                        font-size: 12px;
+
+                    }
+
+                    @include xl {
+                        font-size: 13px;
+
+                    }
+
+                    @include xxl {
+                        font-size: 14px;
+                    }
+                }
+
+                .LabelContainer {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .FeeLabel {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2px 8px;
+                    gap: 8px;
+                    border: 1px solid #1E1E1E;
+                    border-radius: 8px;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 11px;
+                    color: #949494;
+
+                    @include md {}
+
+                    @include lg {
+                        font-size: 10px;
+
+                    }
+
+                    @include xl {
+                        font-size: 11px;
+
+                    }
+
+                    @include xxl {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+        }
+
+        .RangeContainer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            align-items: center;
+            box-sizing: border-box;
+            background: #111111;
+            border: 1px solid #1E1E1E;
+            border-radius: 8px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: #949494;
+
+
+            @include md {}
+
+            @include lg {
+                font-size: 14px;
+                padding: 10px 20px;
+
+            }
+
+            @include xl {
+                font-size: 15px;
+                padding: 12px 25px;
+
+            }
+
+            @include xxl {
+                font-size: 16px;
+                padding: 15px 30px;
+            }
+        }
+
+        .LiquidityContainer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            align-items: center;
+            box-sizing: border-box;
+            background: #111111;
+            border: 1px solid #1E1E1E;
+            border-radius: 8px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: #EEEEEE;
+
+
+            @include md {}
+
+            @include lg {
+                font-size: 14px;
+                padding: 10px 20px;
+
+            }
+
+            @include xl {
+                font-size: 15px;
+                padding: 12px 25px;
+
+            }
+
+            @include xxl {
+                font-size: 16px;
+                padding: 15px 30px;
+            }
+        }
+
+
+        .ButtonsWrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .AddButtonsContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+
+                .Label {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: #FFFFFF;
+
+
+                    @include md {}
+
+                    @include lg {
+                        font-size: 16px;
+
+                    }
+
+                    @include xl {
+                        font-size: 18px;
+
+                    }
+
+                    @include xxl {
+                        font-size: 20px;
+                    }
+                }
+
+                .ActionBtn {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 12px 16px;
+                    gap: 8px;
+                    width: 100%;
+                    height: 45px;
+                    background: #7bf179;
+                    border: 1px solid #7bf179;
+                    border-radius: 6px;
+                    font-family: "Manrope";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #323227;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+
+                    @include md {
+                        font-family: "ManropeBold";
+                        font-size: 12px;
+                    }
+
+                    @include lg {
+                        height: 45px;
+                        font-size: 12px;
+                    }
+
+                    @include xl {
+                        height: 45px;
+                        font-size: 16px;
+                    }
+
+                    @include xxl {
+                        height: 50px;
+                        font-size: 18px;
+                    }
+
+                    &:hover {
+                        background: var(--app-light-green);
+                    }
+
+                    &:active {
+                        background: var(--text-white);
+                    }
+                }
+            }
+        }
+    }
+}

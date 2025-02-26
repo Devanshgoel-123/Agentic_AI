@@ -1,0 +1,30 @@
+.PositionTokenContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+    .PositionToken {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        .TokenLogo {
+            width: 24px;
+            height: 24px;
+        }
+
+        .Value {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+
+    }
+
+}

@@ -1,0 +1,380 @@
+@import ".././../../../app/mixin.scss";
+
+.WithdrawWidget {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  @include md {
+    gap: 13px;
+  }
+
+  @include lg {
+    gap: 13px;
+  }
+
+  @include xl {
+    gap: 14px;
+  }
+
+  @include xxl {
+    gap: 24px;
+  }
+
+  .TokenInputWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    width: 100%;
+
+    .TokenInputContainer {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      width: 100%;
+      background: #101010;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+
+      .InputContainer {
+        display: flex;
+        flex-direction: column;
+
+        .Token-Input {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 22px;
+          color: var(--text-white);
+          outline: none;
+          border: none;
+          width: 100px;
+          background-color: var(--paper-black-dark);
+
+          @include md {
+            width: 120px;
+            font-size: 20px;
+          }
+
+          @include lg {
+            font-size: 20px;
+          }
+
+          @include xl {
+            font-size: 22px;
+          }
+
+          @include xxl {
+            font-size: 24px;
+          }
+
+          &::placeholder {
+            color: var(--text-medium-grey);
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .DollarValue {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 11px;
+          color: #909090;
+
+          @include md {
+            font-size: 10px;
+          }
+
+          @include lg {
+            font-size: 10px;
+          }
+
+          @include xl {
+            font-size: 11px;
+          }
+
+          @include xxl {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .TokenInfoContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px;
+        gap: 10px;
+        background: #101010;
+        border: 1px solid #1e1e1e;
+        border-radius: 6px;
+
+        .TokenLogo {
+          width: 22px;
+          height: 22px;
+          position: relative;
+
+          @include md {
+            width: 20px;
+            height: 20px;
+          }
+
+          @include lg {
+            width: 20px;
+            height: 20px;
+          }
+
+          @include xl {
+            width: 22px;
+            height: 22px;
+          }
+
+          @include xxl {
+            width: 24px;
+            height: 24px;
+          }
+
+          .ChainLogo {
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            bottom: 3px;
+            right: -3px;
+          }
+        }
+
+        .TokenName {
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          color: #ffffff;
+
+          @include md {
+            font-size: 12px;
+          }
+
+          @include lg {
+            font-size: 12px;
+          }
+
+          @include xl {
+            font-size: 14px;
+          }
+
+          @include xxl {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .BalanceContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      .BalanceValue {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        text-align: right;
+        color: #909090;
+
+        @include md {
+          font-size: 10px;
+        }
+
+        @include lg {
+          font-size: 10px;
+        }
+
+        @include xl {
+          font-size: 11px;
+        }
+
+        @include xxl {
+          font-size: 12px;
+        }
+      }
+
+      .MaxBtn {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 8px;
+        border: 1px solid #1e1e1e;
+        border-radius: 6px;
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        text-align: right;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        @include md {
+          font-size: 10px;
+        }
+
+        @include lg {
+          font-size: 10px;
+        }
+
+        @include xl {
+          font-size: 11px;
+        }
+
+        @include xxl {
+          font-size: 12px;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .TokenInputAction {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    .InputAction {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 6px;
+      width: 25%;
+      border: 1px solid #1f1f1f;
+      border-radius: 36px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      font-size: 14px;
+      color: var(--text-medium-grey);
+
+      @include md {
+        padding: 5px 5px;
+        font-size: 12px;
+      }
+
+      @include lg {
+        padding: 5px 5px;
+        font-size: 12px;
+      }
+
+      @include xl {
+        padding: 6px 6px;
+        font-size: 14px;
+      }
+
+      @include xxl {
+        padding: 8px 10px;
+        font-size: 16px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .OutputDetailsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+
+    @include md {
+      gap: 11px;
+    }
+
+    @include lg {
+      gap: 11px;
+    }
+
+    @include xl {
+      gap: 12px;
+    }
+
+    @include xxl {
+      gap: 15px;
+    }
+
+    .Label {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      text-align: center;
+      color: #909090;
+
+      @include md {
+        font-size: 12px;
+      }
+
+      @include lg {
+        font-size: 12px;
+      }
+
+      @include xl {
+        font-size: 13px;
+      }
+
+      @include xxl {
+        font-size: 14px;
+      }
+    }
+
+    .OutputTokenDetails {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+
+      @include md {
+        gap: 8px;
+      }
+
+      @include lg {
+        gap: 8px;
+      }
+
+      @include xl {
+        gap: 8px;
+      }
+
+      @include xxl {
+        gap: 10px;
+      }
+    }
+  }
+
+  .ButtonsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

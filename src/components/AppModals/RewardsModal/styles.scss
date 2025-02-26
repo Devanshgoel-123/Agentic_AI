@@ -1,0 +1,145 @@
+@import "../../../app/mixin.scss";
+
+
+.DynamicPlaceholder {
+  width: 100%;
+  height: 80px;
+  background: var(--paper-black-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.RewardsModalWrapper{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  min-height: 268px;
+  .textHeading{
+    font-size: 14px;
+    
+  }
+  .modalHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include md{
+      font-size: 14px;
+    }
+    @include lg{
+      font-size: 17px;
+    }
+    
+  }
+  .crossIcon{
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        gap: 8px;
+        width: 35px;
+        height: 35px;
+        background: var(--paper-black-medium);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        transform: scale(1);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        color: var(--text-white);
+
+        @include md {
+          width: 30px;
+            height: 30px;
+        }
+
+        @include lg {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include xl {
+            width: 35px;
+            height: 35px;
+        }
+
+        @include xxl {
+            width: 35px;
+            height: 35px;
+        }
+
+        &:hover {
+            transform: scale(0.9);
+            opacity: 0.8;
+        }
+        &:active {
+          transform: scale(0.8);
+      }
+  }
+  .RewardsModal{
+    display: flex;
+    z-index: 5;
+    width: 100%;
+    flex-direction: column;
+    justify-content:flex-start;
+    row-gap: 10px;
+    align-items: center;
+    background: radial-gradient(63.94% 63.94% at 20% 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    border: 2px solid var(--border-color);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 15px 12px;  
+    @include lg{
+      width: 90%;
+    }
+    @include xl{
+      width: 100%;
+    }
+}
+
+}
+
+.go1888806478 {
+  min-width: 0 !important;
+  
+  @include md {
+    top: 70px;
+    max-width: 310px;
+    width:75%;
+    left: 0;
+}
+   @include lg{
+    top: 70px;
+    width: 100%;
+    left: 8%;
+   }
+   @include xl{
+    top: 90px;
+   }
+   @include xxl{
+    top:100px
+   }
+}
+
+.RewardsLoader{
+  padding: 30px;
+  display: flex;
+  background: radial-gradient(63.94% 63.94% at 20% 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    border: 2px solid var(--border-color);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  @include md{
+    font-size: 14px;
+  }
+  @include lg{
+    width: 80%;
+    
+  }
+}

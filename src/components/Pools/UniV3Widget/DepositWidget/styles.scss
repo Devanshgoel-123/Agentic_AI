@@ -1,0 +1,870 @@
+@import "../../../../app/mixin.scss";
+
+.UniV3DepositWidgetWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 90%;
+
+    @include md {
+        width: auto;
+        gap: 10px;
+    }
+
+    @include lg {
+        gap: 10px;
+    }
+
+    @include xl {
+        gap: 15px;
+    }
+
+    @include xxl {
+        gap: 20px;
+    }
+
+    .HeadingContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        @include md {
+            gap: 6px;
+        }
+
+        @include lg {
+            gap: 6px;
+        }
+
+        @include xl {
+            gap: 8px;
+        }
+
+        @include xxl {
+            gap: 10px;
+        }
+
+        .BackBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            width: 35px;
+            height: 35px;
+            background: #121212;
+            border: 1px solid #1E1E1E;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            transform: scale(1);
+
+            @include md {
+                width: 30px;
+                height: 30px;
+            }
+
+            @include lg {
+                width: 30px;
+                height: 30px;
+            }
+
+            @include xl {
+                width: 35px;
+                height: 35px;
+            }
+
+            @include xxl {
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                transform: scale(0.9);
+                opacity: 0.8;
+            }
+        }
+
+        .Heading {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: #FFFFFF;
+
+            @include md {
+                font-size: 14px;
+            }
+
+            @include lg {
+                font-size: 14px;
+            }
+
+            @include xl {
+                font-size: 16px;
+            }
+
+            @include xxl {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .PoolActionsWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        gap: 20px;
+        width: 100%;
+
+
+        @include md {
+            flex-direction: row;
+            width: unset;
+        }
+
+        .PoolInfoContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            @include md {
+                width: 300px;
+            }
+
+            @include lg {
+                width: 300px;
+            }
+
+            @include xl {
+                width: 320px;
+            }
+
+            @include xxl {
+                width: 344px;
+            }
+
+
+            .PoolInputWrapper {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 18px;
+                gap: 12px;
+                background: radial-gradient(63.94% 63.94% at 0 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+                border: 1px solid #1E1E1E;
+                border-radius: 8px;
+
+                .FeeContainer {
+                    width: 100%;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .FeeLabel {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        text-align: center;
+                        color: #FFFFFF;
+
+                        @include md {
+                            font-size: 12px;
+                        }
+
+                        @include lg {
+                            font-size: 12px;
+                        }
+
+                        @include xl {
+                            font-size: 14px;
+                        }
+
+                        @include xxl {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .FeeValue {
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2.49117px 12px;
+                        background: linear-gradient(104.9deg, rgba(88, 88, 88, 0.5) -76.37%, #121212 97.95%),
+                            linear-gradient(88.2deg, #DFCC28 -53.68%, rgba(223, 204, 40, 0) 133.62%),
+                            #FFFFFF;
+                        border: 1.24559px solid #DFCC28;
+                        border-radius: 9.96468px;
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 12.947px;
+                        color: #FFFFFF;
+
+                        @include md {
+                            font-size: 12.947px;
+                        }
+
+                        @include lg {
+                            font-size: 12.947px;
+                        }
+
+                        @include xl {
+                            font-size: 13.947px;
+                        }
+
+                        @include xxl {
+                            font-size: 14.947px;
+                        }
+                    }
+
+                }
+
+                .Label {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    text-align: center;
+                    color: #909090;
+
+                    @include md {
+                        font-size: 14px;
+                    }
+
+                    @include lg {
+                        font-size: 14px;
+                    }
+
+                    @include xl {
+                        font-size: 16px;
+                    }
+
+                    @include xxl {
+                        font-size: 18px;
+                    }
+                }
+
+                .PoolInputContainer {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 12px;
+
+
+                }
+
+                .PoolInfoPill {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px 15px;
+                    width: 100%;
+                    background: #1A1A1A;
+                    border: 0.932611px solid #181818;
+                    border-radius: 100px;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 8px;
+                    text-align: center;
+                    color: #F3BA2F;
+
+                    @include md {
+                        font-size: 8px;
+                    }
+
+                    @include lg {
+                        font-size: 8px;
+                    }
+
+                    @include xl {
+                        font-size: 9px;
+                    }
+
+                    @include xxl {
+                        font-size: 10px;
+                    }
+                }
+
+                .ActionBtnContainer {
+                    width: 100%;
+                    height: 45px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    @include md {
+                        height: 40px;
+                    }
+
+                    @include lg {
+                        height: 40px;
+                    }
+
+                    @include xl {
+                        height: 50px;
+                    }
+
+                    @include xxl {
+                        height: 45px;
+                    }
+
+                    .ActionBtnGreen {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 12px 16px;
+                        gap: 8px;
+                        width: 100%;
+                        height: 100%;
+                        background: #7bf179;
+                        border: 1px solid #7bf179;
+                        border-radius: 6px;
+                        font-family: "Manrope";
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        text-align: center;
+                        color: #323227;
+                        cursor: pointer;
+                        transition: all 0.2s ease-in-out;
+
+                        @include md {
+                            font-family: "ManropeBold";
+                            font-size: 12px;
+                        }
+
+                        @include lg {
+                            font-size: 12px;
+                        }
+
+                        @include xl {
+                            font-size: 14px;
+                        }
+
+                        @include xxl {
+                            font-size: 16px;
+                        }
+
+                        &:hover {
+                            background: var(--app-light-green);
+                        }
+
+                        &:active {
+                            background: var(--text-white);
+                        }
+                    }
+                }
+            }
+        }
+
+        .PoolGraphInfoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 18px;
+            gap: 18px;
+            width: 100%;
+            background: radial-gradient(63.94% 63.94% at 100% 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+            border: 2px solid #1E1E1E;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+
+            @include md {
+                width: 365px;
+            }
+
+            @include lg {
+                width: 365px;
+            }
+
+            @include xl {
+                width: 405px;
+            }
+
+            @include xxl {
+                width: 445px;
+            }
+
+            .GraphInActiveContainer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(10px);
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #909090;
+                font-size: 30px;
+
+                @include md {
+                    font-family: "ManropeBold";
+                    font-size: 32px;
+                }
+
+                @include lg {
+                    font-size: 32px;
+                }
+
+                @include xl {
+                    font-size: 34px;
+                }
+
+                @include xxl {
+                    font-size: 36px;
+                }
+            }
+
+            .HeadingContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                .HeadingText {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #FFFFFF;
+
+                    @include md {
+                        font-family: "ManropeBold";
+                        font-size: 16px;
+                    }
+
+                    @include lg {
+                        font-size: 16px;
+                    }
+
+                    @include xl {
+                        font-size: 18px;
+                    }
+
+                    @include xxl {
+                        font-size: 20px;
+                    }
+                }
+
+                .BackBtn {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 8px;
+                    width: 35px;
+                    height: 35px;
+                    background: #121212;
+                    border: 1px solid #1E1E1E;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                    transform: scale(1);
+                    color: #FFFFFF;
+
+                    @include md {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    @include lg {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    @include xl {
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    @include xxl {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    &:hover {
+                        transform: scale(0.9);
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .GraphWrapper {
+                width: 100%;
+                height: 309px;
+                background: #101010;
+                border: 1px solid #1E1E1E;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+
+                @include md {
+                    height: 289px;
+                }
+
+                @include lg {
+                    height: 289px;
+                }
+
+                @include xl {
+                    height: 209px;
+                }
+
+                @include xxl {
+                    height: 329px;
+                }
+
+                .GraphControlsContainer {
+                    width: 100%;
+                    height: 50px;
+                    padding: 20px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .Label {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 10px;
+                        text-align: center;
+                        color: #A5A5A5;
+
+                        @include md {
+                            font-size: 10px;
+                        }
+
+                        @include lg {
+                            font-size: 10px;
+                        }
+
+                        @include xl {
+                            font-size: 12px;
+                        }
+
+                        @include xxl {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .ControlsWrapper {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+
+                        .ControlsButton {
+                            box-sizing: border-box;
+                            background: #111111;
+                            border: 1px solid #1E1E1E;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #34A853;
+                            font-size: 20px;
+                            padding: 5px;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+
+                            &:nth-child(1) {
+                                color: #f2fef18a;
+                            }
+
+                            @include md {
+                                font-size: 16px;
+                            }
+
+                            @include lg {
+                                font-size: 16px;
+                            }
+
+                            @include xl {
+                                font-size: 18px;
+                            }
+
+                            @include xxl {
+                                font-size: 20px;
+                            }
+
+                            &:hover {
+                                opacity: 0.8;
+                            }
+                        }
+
+                        .TokenButtonContainer {
+                            box-sizing: border-box;
+                            background: #111111;
+                            border: 1px solid #1E1E1E;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #34A853;
+                            font-size: 9px;
+
+
+                            &:nth-child(1) {
+                                color: #f2fef18a;
+                            }
+
+                            @include md {
+                                font-size: 9px;
+                            }
+
+                            @include lg {
+                                font-size: 9px;
+                            }
+
+                            @include xl {
+                                font-size: 10px;
+                            }
+
+                            @include xxl {
+                                font-size: 11px;
+                            }
+
+
+
+                            .TokenButton {
+                                padding: 5px;
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;
+
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+
+                                &:nth-child(1) {
+                                    border-right: 1px solid #1E1E1E;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                .GraphLoadingWrapper {
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--paper-black-medium);
+                    animation: blink-animation 2s infinite;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .GraphArrowLeft {
+                    position: absolute;
+                    top: 100px;
+                    left: 10px;
+                    font-size: 20px;
+                    color: #7BF179;
+
+                    @include md {
+                        font-size: 16px;
+                    }
+
+                    @include lg {
+                        font-size: 16px;
+                    }
+
+                    @include xl {
+                        font-size: 18px;
+                    }
+
+                    @include xxl {
+                        font-size: 20px;
+                    }
+                }
+
+
+                .GraphArrowRight {
+                    position: absolute;
+                    top: 100px;
+                    right: 10px;
+                    font-size: 20px;
+                    color: #7BF179;
+
+                    @include md {
+                        font-size: 16px;
+                    }
+
+                    @include lg {
+                        font-size: 16px;
+                    }
+
+                    @include xl {
+                        font-size: 18px;
+                    }
+
+                    @include xxl {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .GraphLegends {
+                border: 1px solid #1E1E1E;
+                border-radius: 8px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                padding-block: 10px;
+
+                .LegendContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:nth-child(2) {
+                        .LegendLine {
+                            border: unset;
+                            background-color: #7BF179;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        .LegendLine {
+                            height: 10px;
+                            border: unset;
+                            background-color: #F2F2F21F;
+                        }
+                    }
+
+                    .Label {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 10px;
+                        text-align: center;
+                        color: #FFFFFF;
+
+                        @include md {
+                            font-size: 10px;
+                        }
+
+                        @include lg {
+                            font-size: 10px;
+                        }
+
+                        @include xl {
+                            font-size: 11px;
+                        }
+
+                        @include xxl {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .LegendLine {
+                        width: 20px;
+                        height: 1px;
+                        background-color: #f2fef1;
+                    }
+                }
+            }
+
+            .PoolShortActionContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+
+                .PoolShortActionBtn {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 3px 0px;
+                    gap: 10px;
+                    width: 25%;
+                    background: #242424;
+                    opacity: 0.6;
+                    border: 1px solid #1E1E1E;
+                    border-radius: 8px;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    text-align: center;
+                    color: #6A6A6A;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+
+                    @include md {
+                        font-size: 12px;
+                    }
+
+                    @include lg {
+                        font-size: 12px;
+                    }
+
+                    @include xl {
+                        font-size: 13px;
+                    }
+
+                    @include xxl {
+                        font-size: 14px;
+                    }
+
+                    &:hover {
+                        background: transparent;
+                        border: 1px solid #7BF179;
+                        color: #7BF179;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes blink-animation {
+    0% {
+        background-color: var(--paper-black-medium);
+    }
+
+    50% {
+        background-color: var(--border-color);
+        /* Change color or make it transparent */
+    }
+
+    100% {
+        background-color: var(--paper-black-medium);
+    }
+}

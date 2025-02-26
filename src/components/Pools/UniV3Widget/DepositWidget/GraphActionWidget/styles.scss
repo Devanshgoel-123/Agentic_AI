@@ -1,0 +1,181 @@
+@import "../../../../../app/mixin.scss";
+
+.PositionInfoContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 10px;
+    width: 100%;
+    border: 1px solid #1E1E1E;
+    border-radius: 8px;
+
+    @include md {
+        padding: 8px 14px;
+    }
+
+    .PositionInfo {
+        box-sizing: border-box;
+        border: 1px solid #1E1E1E;
+        border-radius: 8px;
+        padding-block: 10px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        &.animate-border {
+            animation: border-animation 1s ease forwards;
+        }
+
+        .PositionInfoLabel {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            text-align: center;
+            color: #909090;
+
+            @include md {
+                font-size: 13px;
+            }
+
+            @include lg {
+                font-size: 13px;
+            }
+
+            @include xl {
+                font-size: 14px;
+            }
+
+            @include xxl {
+                font-size: 15px;
+            }
+        }
+
+        .PositionInfoName {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 9px;
+            text-align: center;
+            color: #909090;
+
+            @include md {
+                font-size: 10px;
+            }
+
+            @include lg {
+                font-size: 11px;
+            }
+
+            @include xl {
+                font-size: 11px;
+            }
+        }
+
+        .PositionValueContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            @include md {
+                gap: 10px;
+            }
+
+            @include xxl {
+                gap: 15px;
+            }
+
+            .PositionValue {
+                width: 60px;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                text-align: center;
+                color: #FFFFFF;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include md {
+                    font-size: 14px;
+                }
+
+                @include lg {
+                    width: 60px;
+                    font-size: 14px;
+                }
+
+                @include xl {
+                    width: 60px;
+                    font-size: 16px;
+                }
+
+                @include xxl {
+                    width: 80px;
+                    font-size: 18px;
+                }
+            }
+
+            .ValueAction {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 13px;
+                color: #C1C1C1;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                @include md {
+                    font-size: 13px;
+                }
+
+                @include lg {
+                    font-size: 13px;
+                }
+
+                @include xl {
+                    font-size: 14px;
+                }
+
+                @include xxl {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+
+
+    }
+}
+
+@keyframes border-animation {
+    0% {
+        border-color: #1E1E1E;
+        box-shadow: none;
+    }
+
+    50% {
+        border-color: #5d9c5b;
+        box-shadow: 0 0 10px #5d9c5b;
+    }
+
+    100% {
+        border-color: #1E1E1E;
+        box-shadow: none;
+    }
+}

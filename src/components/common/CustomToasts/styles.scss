@@ -1,0 +1,224 @@
+@import "../../../app/mixin.scss";
+
+.CustomToastWrapper {
+    width: auto;
+
+    .CustomToastContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 16px 12px 12px;
+        width: 90vw;
+        min-height: 85px;
+        background: #111111;
+        backdrop-filter: blur(4px);
+        border-radius: 8px;
+        box-sizing: border-box;
+        padding: 0px;
+        border: 1px solid var(--border-color);
+        filter: drop-shadow(0px 0px 12px rgba(255, 70, 70, 0.1));
+        border-radius: 8px;
+        overflow: hidden;
+
+        @include md {
+            width: 339px;
+        }
+
+        @include lg {
+            width: 339px;
+        }
+
+        @include xl {
+            width: 369px;
+        }
+
+        @include xxl {
+            width: 409px;
+        }
+
+        .ToastBand {
+            width: 12px;
+            height: 100%;
+            background: var(--app-red);
+            box-shadow: 0px 0px 11px var(--app-red);
+
+            @include md {}
+
+            @include lg {
+                width: 8px;
+            }
+
+            @include xl {
+                width: 10px;
+            }
+
+            @include xxl {
+                width: 12px;
+            }
+        }
+
+        .ToastBody {
+            flex: 1;
+            height: 100%;
+            padding: 12px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include md {}
+
+            @include lg {
+                padding: 10px 14px;
+            }
+
+            @include xl {
+                padding: 11px 16px;
+            }
+
+            @include xxl {
+                padding: 12px 18px;
+            }
+
+            .ToastContent {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 5px;
+
+                .ToastHeading {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 13px;
+                    color: var(--text-white);
+                    text-align: left;
+
+                    @include md {
+                        font-size: 12px;
+                    }
+
+                    @include lg {
+                        font-size: 12px;
+                    }
+
+                    @include xl {
+                        font-size: 13px;
+                    }
+
+                    @include xxl {
+                        font-size: 14px;
+                    }
+                }
+
+                .ToastSubHeading {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 11px;
+                    color: #AEAEAE;
+
+                    @include md {
+                        font-size: 10px;
+                    }
+
+                    @include lg {
+                        font-size: 10px;
+                    }
+
+                    @include xl {
+                        font-size: 11px;
+                    }
+
+                    @include xxl {
+                        font-size: 12px;
+                    }
+                }
+
+                .TransactionHashBtn {
+                    margin-top: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 11px;
+                    color: var(--text-white);
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+
+                    @include md {
+                        font-size: 10px;
+                    }
+
+                    @include lg {
+                        font-size: 10px;
+                    }
+
+                    @include xl {
+                        font-size: 11px;
+                    }
+
+                    @include xxl {
+                        font-size: 12px;
+                    }
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    .OpenIcon {
+                        width: 14px;
+                        height: 14px;
+
+                        @include md {}
+
+                        @include lg {
+                            width: 12px;
+                            height: 12px;
+                        }
+
+                        @include xl {
+                            width: 13px;
+                            height: 13px;
+                        }
+
+                        @include xxl {
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                }
+            }
+
+            .CloseBtn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 18px;
+                height: 18px;
+                opacity: 0.2;
+                cursor: pointer;
+
+                @include md {}
+
+                @include lg {
+                    width: 15px;
+                    height: 15px;
+                }
+
+                @include xl {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                @include xxl {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}

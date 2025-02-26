@@ -1,0 +1,605 @@
+@import "../../../../app/mixin.scss";
+
+.TransactionStatusModalWrapper {
+    .TransactionStatusModalContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 16px;
+        width: 90vw;
+        gap: 16px;
+        background: var(--paper-black);
+        border: 2px solid var(--border-color);
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+
+        @include md {
+            width: 380px;
+            padding: 16px;
+            gap: 13px;
+        }
+
+        @include lg {
+            width: 380px;
+            padding: 16px;
+            gap: 13px;
+        }
+
+        @include xl {
+            width: 425px;
+            padding: 18px;
+            gap: 13px;
+        }
+
+        @include xxl {
+            width: 470px;
+            padding: 24px;
+            gap: 20px;
+        }
+
+        .ChainStatusContainer {
+            width: 100%;
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            @include md {
+                flex-direction: row;
+            }
+
+            .ChainStatusDetails {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 6px;
+                width: 100%;
+                height: auto;
+                background: var(--paper-black-dark);
+                border: 1px solid var(--border-color);
+                border-radius: 6px;
+                position: relative;
+                padding: 10px 10px;
+                flex-wrap: wrap;
+
+
+                @include md {
+                    flex-wrap: nowrap;
+                    padding-inline: 0px;
+                    flex-direction: column;
+                    width: 125px;
+                    height: 175px;
+                }
+
+                @include lg {
+                    width: 110px;
+                    height: 150px;
+                }
+
+                @include xl {
+                    width: 125px;
+                    height: 175px;
+                }
+
+                @include xxl {
+                    width: 135px;
+                    height: 190px;
+                }
+
+                .ArrowIcon {
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    top: 85%;
+                    right: 50%;
+                    transform: translate(-50%, -50%);
+                    border: 1px solid var(--border-color);
+                    z-index: 2;
+                    border-radius: 50%;
+                    background: var(--paper-black-dark);
+                    padding: 7px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: rotate(90deg);
+
+                    @include md {
+                        top: 50%;
+                        right: -17px;
+                        transform: translate(0, -50%);
+                        transform: rotate(0deg);
+                    }
+
+
+                }
+
+                .ChainDetails {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 10px;
+
+                    @include md {
+                        gap: 5px;
+                        width: 100%;
+                        height: 50%;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+
+                    .TokenLogo {
+                        width: 35px;
+                        height: 35px;
+                        position: relative;
+
+                        @include md {
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        @include lg {
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        @include xl {
+                            width: 35px;
+                            height: 35px;
+                        }
+
+                        @include xxl {
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        .ChainLogo {
+                            width: 14px;
+                            height: 14px;
+                            position: absolute;
+                            bottom: 0;
+                            right: -3px;
+
+                            @include md {
+                                width: 12px;
+                                height: 12px;
+                            }
+
+                            @include lg {
+                                bottom: 3px;
+                                width: 12px;
+                                height: 12px;
+                            }
+
+                            @include xl {
+                                bottom: 0px;
+                                width: 14px;
+                                height: 14px;
+                            }
+
+                            @include xxl {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+
+                    .ChainName {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        width: 70px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        @include md {
+                            width: auto;
+                            font-size: 10px;
+                        }
+
+                        @include lg {
+                            font-size: 10px;
+                        }
+
+                        @include xl {
+                            font-size: 11px;
+                        }
+
+                        @include xxl {
+                            font-size: 12px;
+                        }
+                    }
+
+                }
+
+                hr {
+                    width: 100%;
+                    border: 1px solid var(--border-color);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: none;
+
+                    @include md {
+                        display: block;
+                    }
+                }
+
+                .BlockConfirmationsWrapper {
+                    width: auto;
+                    flex: 1;
+                    height: auto;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    flex-direction: column;
+
+                    @include md {
+                        justify-content: center;
+                        width: 100%;
+                        height: 50%;
+                    }
+
+
+                    .WaitingTextLabel {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 10px;
+                        text-align: center;
+                        color: var(--text-medium-grey);
+                        width: 90%;
+                        text-wrap: wrap;
+                        text-align: center;
+
+                        @include md {
+                            font-size: 8px;
+                        }
+
+                        @include lg {
+                            font-size: 8px;
+                        }
+
+                        @include xl {
+                            font-size: 9px;
+                        }
+
+                        @include xxl {
+                            font-size: 10px;
+                        }
+                    }
+
+                    .BlockConfirmationsContainer {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        gap: 3px;
+
+                        @include md {
+                            align-items: center;
+                        }
+
+                        .BlockNumberContainer {
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+
+                            .ClockIcon {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 14px;
+                                height: 14px;
+
+
+                                @include md {
+                                    width: 12px;
+                                    height: 12px;
+                                }
+
+                                @include lg {
+                                    width: 12px;
+                                    height: 12px;
+                                }
+
+                                @include xl {
+                                    margin-top: 1px;
+                                    width: 14px;
+                                    height: 14px;
+                                }
+
+                                @include xxl {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+
+                            .BlockNumber {
+                                font-family: 'Manrope';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 13px;
+                                color: var(--text-white);
+
+
+                                @include md {
+                                    font-size: 12px;
+                                }
+
+                                @include lg {
+                                    font-size: 12px;
+                                }
+
+                                @include xl {
+                                    font-size: 13px;
+                                }
+
+                                @include xxl {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        .BlockLabel {
+                            font-family: 'Manrope';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 11px;
+                            color: var(--text-medium-grey);
+                            width: 100%;
+                            text-align: end;
+
+                            @include md {
+                                text-align: center;
+                                font-size: 10px;
+                            }
+
+                            @include lg {
+                                font-size: 10px;
+                            }
+
+                            @include xl {
+                                font-size: 11px;
+                            }
+
+                            @include xxl {
+                                font-size: 12px;
+                            }
+                        }
+
+                        .ProgressContainer {
+                            display: none;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: 0px;
+                            gap: 8px;
+                            width: 80%;
+                            height: 8px;
+                            margin-top: 4px;
+                            background-color: var(--paper-black-light);
+                            border-radius: 13px;
+
+                            @include md {
+                                display: flex;
+                            }
+
+                            @include lg {
+                                height: 6px;
+                            }
+
+                            @include xl {
+                                height: 7px;
+                            }
+
+                            @include xxl {
+                                height: 8px;
+                            }
+
+                            .ProgressBar {
+                                width: 70%;
+                                height: 100%;
+                                background: linear-gradient(90deg, var(--app-green) 0%, var(--app-green) 87.2%, var(--app-white-green) 100%);
+                                border-radius: 13px;
+                                transition: all 0.5s ease-in-out;
+                            }
+                        }
+
+                        .ViewTransactionBtn {
+                            display: none;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+                            font-family: 'Manrope';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 12px;
+                            color: var(--text-white-medium);
+                            margin-top: 2px;
+                            cursor: pointer;
+                            transition: all 0.1s ease-in-out;
+
+                            @include md {
+                                display: flex;
+                            }
+
+                            @include lg {
+                                font-size: 10px;
+                            }
+
+                            @include xl {
+                                font-size: 11px;
+                            }
+
+                            @include xxl {
+                                font-size: 12px;
+                            }
+
+                            &:hover {
+                                opacity: 0.8;
+                            }
+
+                            .OpenIcon {
+                                width: 12px;
+                                height: 12px;
+                            }
+                        }
+                    }
+
+
+                }
+
+                .MobileProgressContainer {
+                    width: 100%;
+                    padding: 5px 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    @include md {
+                        display: none;
+                    }
+
+
+                    .ProgressContainer {
+                        width: 100%;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0px;
+                        gap: 8px;
+                        height: 8px;
+                        margin-top: 4px;
+                        background-color: var(--paper-black-light);
+                        border-radius: 13px;
+
+                        @include md {}
+
+                        @include lg {
+                            height: 6px;
+                        }
+
+                        @include xl {
+                            height: 7px;
+                        }
+
+                        @include xxl {
+                            height: 8px;
+                        }
+
+                        .ProgressBar {
+                            width: 70%;
+                            height: 100%;
+                            background: linear-gradient(90deg, var(--app-green) 0%, var(--app-green) 87.2%, var(--app-white-green) 100%);
+                            border-radius: 13px;
+                            transition: all 0.5s ease-in-out;
+                        }
+                    }
+
+                    .ViewTransactionBtn {
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: var(--text-white-medium);
+                        margin-top: 2px;
+                        cursor: pointer;
+                        transition: all 0.1s ease-in-out;
+
+                        @include md {
+                            display: flex;
+                        }
+
+                        @include lg {
+                            font-size: 10px;
+                        }
+
+                        @include xl {
+                            font-size: 11px;
+                        }
+
+                        @include xxl {
+                            font-size: 12px;
+                        }
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+
+                        .OpenIcon {
+                            width: 18px;
+                            height: 18px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .TransactionStatusActionBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            height: 45px;
+            background: var(--app-green);
+            border: 1px solid var(--app-green);
+            border-radius: 6px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            color: var(--text-dark);
+            cursor: pointer;
+
+            @include md {
+                font-family: 'ManropeBold';
+                font-size: 12px;
+                height: 40px;
+            }
+
+            @include lg {
+                font-size: 12px;
+                height: 40px;
+            }
+
+            @include xl {
+                font-size: 16px;
+                height: 50px;
+            }
+
+            @include xxl {
+                font-size: 18px;
+                height: 52px;
+            }
+
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background: var(--app-light-green);
+            }
+
+            &:active {
+                background: var(--text-white);
+            }
+        }
+    }
+}

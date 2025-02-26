@@ -1,0 +1,208 @@
+@import "../../../app/mixin.scss";
+
+
+
+.TokenInfoContainerDust {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    background: var(--paper-black-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    @include lg{
+        padding-inline:12px;
+        padding-block: 8px;
+    }
+    @include xl{
+        padding: 12px;
+    }
+    .Label {
+        position: absolute;
+        top: -12px;
+        left: 15px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        color: #909090;
+        @include lg{
+            font-size: 11px;
+        }
+        @include xl{
+            font-size: 12px;
+        }
+    }
+
+    .LogoContainer {
+        display: flex;
+        align-items: center;
+        position: relative;
+        .InitialTokens{
+            display: flex;
+            flex-direction: row;
+        }
+        .TokenText{
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            background-color:var(--border-color);
+            @include lg{
+                font-size: 12px;
+            }
+            @include xl{
+                font-size: 16px;
+            }
+        }
+        .TokenLogo {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            position: relative;
+            @include md {}
+
+            @include lg {
+                width: 22px;
+                height: 22px;
+            }
+
+            @include xl {
+                width: 30px;
+                height: 30px;
+            }
+
+            
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:nth-child(2) {
+                z-index: 2;
+                margin-left: -4px
+            }
+
+            &:nth-child(3) {
+                z-index: 3;
+                 margin-left: -4px
+            }
+
+            &:nth-child(4) {
+                z-index: 4;
+                margin-left: -4px
+            }
+        }
+    
+        .TokenName {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-white);
+            outline: none;
+            border: none;
+            background-color: var(--paper-black-dark);
+            margin-left: 10px;
+            @include md {
+                font-size: 16px;
+            }
+
+            @include lg {
+                font-size: 14px;
+            }
+
+            @include xl {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .ChainDetailsDust {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 8px;
+        background: var(--paper-black-dark);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        @include md {}
+
+        @include lg {
+            padding: 12px;
+            gap: 10px;
+        }
+
+
+        &:hover {
+            background-color: var(--paper-black-medium);
+        }
+
+
+        .ChainLogo {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            position: relative;
+
+            @include md {}
+
+            @include lg {
+                width: 22px;
+                height: 22px;
+            }
+
+            @include xl {
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+
+        .ChainName {
+            font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                color: var(--text-white);
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+
+                @include md {}
+
+                @include lg {
+                    font-size: 14px;
+                }
+
+                @include xl {
+                    font-size: 16px;
+                }
+
+                @include xxl {
+                   
+                }
+        }
+
+        .DropdownIcon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: #757575;
+        }
+    }
+}

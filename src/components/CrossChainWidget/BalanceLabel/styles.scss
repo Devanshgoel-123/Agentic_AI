@@ -1,0 +1,43 @@
+@import "../../../app/mixin.scss";
+
+.TokenBalance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    text-align: right;
+    color: var(--text-medium-grey);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    position: absolute;
+    bottom: -25px;
+    right: 10px;
+
+    @include md {}
+
+    @include lg {
+        font-size: 10px;
+        bottom: -22px;
+        right: 10px;
+    }
+
+    @include xl {
+        font-size: 14px;
+        bottom: -25px;
+        right: 10px;
+    }
+
+    @include xxl {
+        font-size: 14px;
+        bottom: -30px;
+        right: 10px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

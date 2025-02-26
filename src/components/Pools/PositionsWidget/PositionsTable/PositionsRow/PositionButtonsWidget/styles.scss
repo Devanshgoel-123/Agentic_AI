@@ -1,0 +1,111 @@
+@import "../../../../../../app/mixin.scss";
+
+.PositionButtonsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+
+    @include md {
+        flex-direction: row;
+    }
+
+
+    .ManageButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        background: #1E1E1E;
+        border-radius: 8px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        text-align: center;
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        width: 100%;
+
+        &:nth-child(3) {
+            display: flex;
+
+            @include md {
+                display: none;
+            }
+
+            @include lg {
+                display: flex;
+            }
+        }
+
+        @include md {
+            width: unset;
+        }
+
+        @include lg {
+            font-size: 10px;
+        }
+
+        @include xl {
+            font-size: 12px;
+        }
+
+        @include xxl {
+            font-size: 14px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .ManageButtonGreen {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        background-color: var(--app-green);
+        border-radius: 8px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        text-align: center;
+        color: var(--text-dark);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        width: 100%;
+
+        @include md {
+            width: unset;
+        }
+
+        @include lg {
+            font-family: 'ManropeBold';
+            font-size: 10px;
+        }
+
+        @include xl {
+            font-size: 12px;
+        }
+
+        @include xxl {
+            font-size: 14px;
+        }
+
+        &:hover {
+            background: var(--app-light-green);
+        }
+
+        &:active {
+            background: var(--text-white);
+        }
+    }
+
+}

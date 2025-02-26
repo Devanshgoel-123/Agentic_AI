@@ -1,0 +1,88 @@
+@import "../../../../app/mixin.scss";
+
+.ChainInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 8px;
+    background: var(--paper-black-dark);
+    border: 1px solid var(--border-color);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    @include md {
+        border-radius: 6px;
+        padding: 8px;
+    }
+    &:hover {
+        background: linear-gradient(106.18deg, rgba(88, 88, 88, 0.04) -108.53%, #121212 86.85%);
+    }
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 0px;
+        background-color: var(--app-green);
+        transition: all 0.3s ease;
+        opacity: 0.7;
+    }
+
+    &.show-line::before{
+        height: 50%; 
+    }
+
+    .ChainLogo {
+        width: 30px;
+        height: 30px;
+
+        @include md {
+            width: 16px;
+            height: 16px;
+        }
+
+        @include lg {
+            width: 16px;
+            height: 16px;
+        }
+
+        @include xl {
+            width: 18px;
+            height: 18px;
+        }
+
+        @include xxl {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .ChainName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        color: #FFFFFF;
+        @include md {
+            display: block;
+        }
+
+        @include lg {
+            font-size: 9px;
+        }
+
+        @include xl {
+            font-size: 12px;
+        }
+
+        @include xxl {
+            font-size: 14px;
+        }
+    }
+}

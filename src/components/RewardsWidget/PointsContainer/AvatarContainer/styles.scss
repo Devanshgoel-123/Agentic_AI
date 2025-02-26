@@ -1,0 +1,98 @@
+@import "../../../../app/mixin.scss";
+.AvatarContainer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.3s ease-in-out; 
+    
+
+   @include md{
+    width: auto;
+    padding: 0;
+    
+   }
+   .scratchContainer{
+    display: flex;
+    height: 100%;
+    position: relative;
+    .ScratchOverlay{
+        position: absolute;
+        z-index: 3;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+       }
+   }
+   
+    .AvatarIcon {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out; 
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.3);
+        }
+        @include md{
+            width: 120px;
+            height: 120px;
+        }
+       
+    }
+
+    .AvatarShimmer{
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: colorChange 2s ease-in-out infinite;
+        cursor: pointer;
+        @include md{
+            width: 120px;
+            height: 120px;
+        }
+        }
+        @keyframes colorChange {
+            0% {
+                opacity: 0.5;
+                color: var(--text-grey);
+            }
+        
+            50% {
+                opacity: 1;
+                color: var(--text-white);
+            }
+        
+            100% {
+                opacity: 0.5;
+                color: var(--text-grey);
+            }
+     }
+    .AvatarLevel {
+        font-family: 'Manropebold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        color: #FFFFFF; 
+    }
+
+    .AvatarName {
+        font-family: 'Manropebold';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        color: #7BF179;
+        @include md{
+            font-size: 16px;
+        }
+    }
+}

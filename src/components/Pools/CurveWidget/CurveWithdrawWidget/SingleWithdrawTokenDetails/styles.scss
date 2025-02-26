@@ -1,0 +1,185 @@
+@import "../../../../../app/mixin.scss";
+
+.OutputToken {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .TokenDetails {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        .CustomRadioButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 13px;
+            height: 13px;
+            background: #111111;
+            border: 1px solid #383838;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+
+            @include md {
+                width: 11px;
+                height: 11px;
+            }
+
+            @include lg {
+                width: 11px;
+                height: 11px;
+            }
+
+            @include xl {
+                width: 13px;
+                height: 13px;
+            }
+
+            @include xxl {
+                width: 15px;
+                height: 15px;
+            }
+
+            .RadioCircle {
+                width: 4px;
+                height: 4px;
+                background-color: #7BF179;
+                border-radius: 50%;
+                transform: scale(0);
+                transition: all 0.2s ease-in-out;
+
+                @include md {
+                    width: 3px;
+                    height: 3px;
+                }
+
+                @include lg {
+                    width: 3px;
+                    height: 3px;
+                }
+
+                @include xl {
+                    width: 4px;
+                    height: 4px;
+                }
+
+                @include xxl {
+                    width: 5px;
+                    height: 5px;
+                }
+            }
+        }
+
+        .TokenLogo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 18px;
+            height: 18px;
+
+            @include md {
+                width: 16px;
+                height: 16px;
+            }
+
+            @include lg {
+                width: 16px;
+                height: 16px;
+            }
+
+            @include xl {
+                width: 18px;
+                height: 18px;
+            }
+
+            @include xxl {
+                width: 20px;
+                height: 20px;
+            }
+
+        }
+
+        .TokenAmount {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            text-align: center;
+            color: #FFFFFF;
+
+            @include md {
+                font-size: 12px;
+            }
+
+            @include lg {
+                font-size: 12px;
+            }
+
+            @include xl {
+                font-size: 13px;
+            }
+
+            @include xxl {
+                font-size: 14px;
+            }
+        }
+
+        .TokenName {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            text-align: center;
+            color: #FFFFFF;
+
+
+
+            @include md {
+                font-size: 12px;
+            }
+
+            @include lg {
+                font-size: 12px;
+            }
+
+            @include xl {
+                font-size: 13px;
+            }
+
+            @include xxl {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .TokenDollar {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        text-align: center;
+        color: #909090;
+
+        @include md {
+            font-size: 12px;
+        }
+
+        @include lg {
+            font-size: 12px;
+        }
+
+        @include xl {
+            font-size: 13px;
+        }
+
+        @include xxl {
+            font-size: 14px;
+        }
+    }
+}

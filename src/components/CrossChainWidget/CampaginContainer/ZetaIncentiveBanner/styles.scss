@@ -1,0 +1,98 @@
+@import "../../../../app/mixin.scss";
+
+.ZetaIncentiveBannerContainer {
+    width: 100%;
+    height: 100%;
+    padding-left: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    @include md {}
+
+    @include lg {
+        padding-left: 20px;
+    }
+
+    @include xl {
+        padding-left: 22px;
+    }
+
+    @include xxl {
+        padding-left: 24px;
+    }
+
+    .BannerDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        .BannerHeading {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--text-white);
+
+            @include md {}
+
+            @include lg {
+                font-size: 12px;
+            }
+
+            @include xl {
+                font-size: 14px;
+            }
+
+            @include xxl {
+                font-size: 16px;
+            }
+
+            .Green {
+                color: var(--app-green);
+            }
+        }
+
+        .BannerSubHeading {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            color: var(--text-dense-grey);
+
+            @include md {}
+
+            @include lg {
+                font-size: 10px;
+            }
+
+            @include xl {
+                font-size: 12px;
+            }
+
+            @include xxl {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .BannerImage {
+        width: 74px;
+        height: 100%;
+
+        @include md {}
+
+        @include lg {
+            width: 84px;
+        }
+
+        @include xl {
+            width: 94px;
+        }
+
+        @include xxl {
+            width: 114px;
+        }
+    }
+}

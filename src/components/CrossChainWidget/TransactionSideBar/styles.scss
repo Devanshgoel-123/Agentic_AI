@@ -1,0 +1,133 @@
+@import "../../../app/mixin.scss";
+
+.DrawerList{
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    overflow: hidden;
+
+    @include sm{
+        width: 250px;
+    }
+    @include md{
+        width: 250px;
+    }
+    @include lg{
+        width: 250px;
+    }  
+    @include xl{
+        width: 300px;
+    }
+    @include xxl{
+        width: 350px;
+    }
+    .sideDrawerHeader{
+        display: flex;
+        flex-direction: row;
+        align-items: center;       
+        z-index: 10;
+        width: 100%;
+        justify-content:flex-start;
+        padding: 0px 20px 0px 20px;
+        position: fixed;
+        border-bottom: 1px solid var(--border-color);
+        @include sm{
+            background-color: var(--paper-black-green);
+            height: 70px;
+        }
+        @include md{
+            background-color: var(--paper-black-green);
+            height: 50px;
+        }
+        @include lg {
+            background-color: var(--paper-black-green);
+            // padding-block: 8px;
+            height: 55px;
+        }
+    
+        @include xl {
+            // padding-block: 12px;
+            height: 60px;
+        }
+    
+        @include xxl {
+            // padding-block: 15px;
+            height: 65px;
+        }
+    }
+    .headerText{
+        margin-left: 20px;
+        color: var(--text-dense-grey-dark);
+        @include xl{
+            font-size: 22px;
+        }
+    }
+    .crossIcon{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        gap: 8px;
+        width: 35px;
+        height: 35px;
+        background: var(--paper-black-medium);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        transform: scale(1);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        color: var(--text-white);
+
+        @include md {}
+
+        @include lg {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include xl {
+            width: 35px;
+            height: 35px;
+        }
+
+        @include xxl {
+            width: 40px;
+            height: 40px;
+        }
+
+        &:hover {
+            transform: scale(0.9);
+            opacity: 0.8;
+        }
+
+        &:active {
+            transform: scale(0.8);
+        }
+    }
+    .TransactionsContainer{
+        margin-top: 75px;
+        overflow-y: scroll;
+        padding: 10px 20px;
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        row-gap: 10px;
+        @include sm{
+            margin-top: 70px;
+        }
+        @include md{
+            margin-top: 50px;
+        }
+        @include lg{
+            margin-top: 55px;
+        }
+        @include xl{
+            margin-top: 60px;
+        }
+        @include xxl{
+            margin-top: 65px;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import "../../../../../app/mixin.scss";
+
+.PoolsBalancesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 18px;
+    gap: 10px;
+    width: 100%;
+    background: radial-gradient(63.94% 63.94% at 100% 0, hsla(0, 0%, 100%, .03) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    border: 2px solid #1E1E1E;
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+
+    @include md {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    @include lg {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    @include xl {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    @include xxl {
+        padding: 20px;
+        gap: 18px;
+    }
+
+    .Label {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: #909090;
+
+        @include md {
+            font-size: 12px;
+        }
+
+        @include lg {
+            font-size: 12px;
+        }
+
+        @include xl {
+            font-size: 14px;
+        }
+
+        @include xxl {
+            font-size: 16px;
+        }
+    }
+
+    .PoolsBreakDownContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

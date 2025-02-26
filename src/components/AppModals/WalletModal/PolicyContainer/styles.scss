@@ -1,0 +1,65 @@
+@import "../../../../app/mixin.scss";
+
+.PolicyContainer {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    .CheckboxContainer {
+        animation: bounce 1s ease-in-out;
+    }
+
+    .PolicyText {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        color: var(--text-dark-grey);
+
+
+        @include md {}
+
+        @include lg {
+            font-size: 10px;
+        }
+
+        @include xl {
+            font-size: 11px;
+        }
+
+        @include xxl {
+            font-size: 12px;
+        }
+
+        .Green {
+            font-family: 'Manrope';
+            color: var(--app-green);
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}

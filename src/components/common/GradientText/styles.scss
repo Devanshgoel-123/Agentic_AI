@@ -1,0 +1,11 @@
+.GradientText {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    background: linear-gradient(95.86deg, var(--text-grey) -20.23%, var(--text-white) 74.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}

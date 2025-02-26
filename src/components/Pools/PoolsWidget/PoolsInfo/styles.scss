@@ -1,0 +1,235 @@
+@import "../../../../app/mixin.scss";
+
+.PoolsInfoWrapper {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    width: 100%;
+    background: radial-gradient(63.94% 63.94% at 10% 0, hsla(0, 0%, 100%, .06) 0, hsla(0, 0%, 100%, 0) 100%), #111;
+    border: 2px solid #1E1E1E;
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+
+    @include md {}
+
+    @include lg {
+        display: flex;
+        padding: 18px;
+        gap: 16px;
+    }
+
+    @include xl {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    @include xxl {
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .HeadingContainer {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: var(--text-white);
+
+        @include md {}
+
+        @include lg {
+            font-size: 12px;
+        }
+
+        @include xl {
+            font-size: 14px;
+        }
+
+        @include xxl {
+            font-size: 16px;
+        }
+    }
+
+    .InfoContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+
+        @include md {}
+
+        @include lg {
+            gap: 12px;
+        }
+
+        @include xl {
+            gap: 15px;
+        }
+
+        @include xxl {
+            gap: 20px;
+        }
+
+        .InfoCard {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px;
+            gap: 8px;
+            width: 35%;
+            height: 172px;
+            border: 1px solid #1E1E1E;
+            border-radius: 8px;
+
+            @include md {}
+
+            @include lg {
+                height: 132px;
+                padding: 14px;
+            }
+
+            @include xl {
+                height: 152px;
+                padding: 14px;
+            }
+
+            @include xxl {
+                height: 172px;
+                padding: 16px;
+            }
+
+            .HeadingContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                text-align: center;
+                color: #FFFFFF;
+
+                @include md {}
+
+                @include lg {
+                    gap: 8px;
+                    font-size: 12px;
+                }
+
+                @include xl {
+                    gap: 8px;
+                    font-size: 13px;
+                }
+
+                @include xxl {
+                    gap: 10px;
+                    font-size: 14px;
+                }
+
+                .InfoIndex {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20px;
+                    height: 20px;
+                    background: #7BF179;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 12px;
+                    text-align: center;
+                    color: #121212;
+                    border-radius: 50%;
+
+                    @include md {}
+
+                    @include lg {
+                        font-size: 10px;
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    @include xl {
+                        font-size: 11px;
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                    @include xxl {
+                        font-size: 12px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+
+            .InfoContent {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                color: #949494;
+
+                @include md {}
+
+                @include lg {
+                    font-size: 10px;
+                }
+
+                @include xl {
+                    font-size: 11px;
+                }
+
+                @include xxl {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .InfoButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 24px;
+        gap: 8px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        color: #333333;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        @include md {}
+
+        @include lg {
+            font-size: 12px;
+            padding: 8px 16px;
+        }
+
+        @include xl {
+            font-size: 13px;
+            padding: 10px 20px;
+        }
+
+        @include xxl {
+            font-size: 14px;
+            padding: 12px 24px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
