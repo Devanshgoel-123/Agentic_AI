@@ -48,7 +48,7 @@ export const useAgentStore=create<AgentStore>((set,get)=>({
     disable:false,
     sendingTransaction:false,
     showTransactionHash:false,
-    activeChatId:5,
+    activeChatId:1,
     userChatSummary:[],
     agentResponses:[],
     userChats:[],
