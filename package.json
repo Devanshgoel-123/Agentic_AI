@@ -19,6 +19,8 @@
         "entrypoints": []
     },
     "dependencies": {
+        "@0xsquid/sdk": "^2.9.1",
+        "@0xsquid/squid-types": "^0.1.139",
         "@apollo/client": "^3.11.4",
         "@binance/w3w-wagmi-connector-v2": "^1.2.4-alpha.0",
         "@coinbase/agentkit": "^0.2.3",
@@ -36,6 +38,7 @@
         "@mui/material": "^5.16.7",
         "@mui/material-nextjs": "^6.3.1",
         "@mui/x-charts": "^7.23.2",
+        "@prisma/client": "^6.4.1",
         "@project-serum/anchor": "^0.26.0",
         "@scure/base": "^1.1.9",
         "@scure/btc-signer": "^1.4.0",
@@ -56,6 +59,7 @@
         "ethers": "^6.13.2",
         "framer-motion": "^11.3.30",
         "graphql": "^16.9.0",
+        "install": "^0.13.0",
         "ldrs": "^1.0.2",
         "lottie-web": "^5.12.2",
         "mixpanel-browser": "^2.56.0",
@@ -63,6 +67,8 @@
         "next-unused": "^0.0.6",
         "nextjs-toploader": "^3.6.15",
         "notistack": "^3.0.1",
+        "npm": "^11.1.0",
+        "prisma": "^6.4.1",
         "react": "^18",
         "react-confetti": "^6.2.2",
         "react-dom": "^18",

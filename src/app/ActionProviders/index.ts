@@ -22,3 +22,5 @@ class GetAddress extends ActionProvider<WalletProvider> {
 }
 
 export const myActionProvider = () => new GetAddress();
+
+
