@@ -1,0 +1,88 @@
+# Ignore Dockerfile
+Dockerfile
+
+# Ignore Node.js modules
+**/node_modules/
+
+# Ignore Git files and directories
+**/.git
+**/.gitignore
+
+# Ignore licenses (if not needed in the image)
+**/LICENSE
+
+# Ignore IDE/editor specific files
+**/.vscode
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+**/.editorconfig
+
+# Ignore npm logs
+**/npm-debug.log
+npm-debug.log
+
+# Ignore coverage directories
+**/coverage
+.coverage
+coverage.xml
+htmlcov/
+
+# Ignore distribution/build directories
+**/dist
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Ignore AWS configuration files
+**/.aws
+
+# Ignore GitHub configuration files
+**/.github/*
+
+# Ignore Python bytecode and cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment files and directories
+*.env
+.env
+*.env.*
+.venv/
+env/
+venv/
+
+# Ignore logs and other output files
+*.log
+*.out
+*.txt
+*.pid
+
+# Ignore virtual environments
+/.venv
+/.virtualenv
+/env
+/env/
+
+# Ignore temporary files
+*.swp
+*.swo
+*~
+*.bak
+
+# Ignore Fastify and Express related files
+.fastify-debug-log
+.express-debug-log
+
+# Ignore Kubernetes manifests
+kubernetes-manifests-*/*
+
+# Ignore secrets and credentials
+secrets/
+credentials/
+config.yaml
+config.json
