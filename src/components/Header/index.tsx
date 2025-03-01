@@ -30,19 +30,9 @@ const HeaderLinksData = [
     icon: <MdOutlineSwapCalls />,
   },
   {
-    text: "Pools",
-    route: "/pools",
-    icon: <FaBalanceScale />,
-  },
-  {
     text: "Aggregator",
     route: "/dust-aggregator",
     icon: <IoAnalyticsSharp />,
-  },
-  {
-    text: "Rewards",
-    route: "/rewards",
-    icon: <LuGift />,
   },
 ];
 
@@ -58,31 +48,6 @@ const Header = () => {
   const isAgent=pathname.includes("agent")
   return (
     <div className="HeaderSection">
-      {isDown && (
-        <div className="MaintenanceBanner">
-          All transactions on ZetaChain may experience delays due to ongoing
-          maintenance. We apologize for any inconvenience caused and appreciate
-          your understanding.
-        </div>
-      )}
-      {!isAgent && <div className="RewardsBanner">
-        <div className="BannerBg">
-          <CustomIcon src={REWARDS_BANNER_HEADER} />
-        </div>
-        <span className="Heading">
-          <span className="GreenIcon">
-            <FiGift />
-          </span>{" "}
-          Nori Reward Season is Live{" "}
-          <Link href={"/rewards/claim"} style={{ textDecoration: "none" }}>
-            <span className="Green">Claim Now</span>
-          </Link>
-        </span>
-        <span className="SubHeading">
-          Perform tasks to earn Nori points and earn rewards
-        </span>
-      </div>}
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -92,7 +57,7 @@ const Header = () => {
           <div className="Logo">
             <CustomIcon src={EDDY_LOGO} />
           </div>
-          <span className="LogoText">Eddy Finance</span>
+          <span className="LogoText">Agentic AI</span>
         </div>
         <div className="HeaderContainer">
           {HeaderLinksData.map((item, index) => (
