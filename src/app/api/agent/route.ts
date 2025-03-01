@@ -21,6 +21,7 @@ import {
   import { SYSTEM_PROMPT } from "@/utils/systemPrompt";
   import { createWalletClient } from "viem";
   import { z } from "zod";
+  import { swapTool,fecthTokenAddressTool,fetchTokenDetailsTool,fetchTokenPriceInUsdTool } from "@/app/ActionProviders/Tools";
   import { baseSepolia, base} from "viem/chains";
 import { privateKeyToAccount } from "viem/accounts";
   dotenv.config();
@@ -29,6 +30,8 @@ import { privateKeyToAccount } from "viem/accounts";
     myField: z.string(),
   });
   
+
+
   function validateEnvironment(): void {
     const missingVars: string[] = [];
     const requiredVars = [
@@ -59,7 +62,7 @@ import { privateKeyToAccount } from "viem/accounts";
   // Initialize agent (runs once when the module is loaded)
   let agent: any;
   let agentConfig: any;
-  let agentInitialized = false; // Track initialization status
+  let agentInitialized = false;
   let initializationPromise: Promise<void> | null = null; // Store the promise
   
   async function initializeAgent() {
@@ -74,7 +77,7 @@ import { privateKeyToAccount } from "viem/accounts";
     //   });
     const llm = new ChatOpenAI({
         model: "gpt-4o-mini",
-      });
+      }).bindTools([swapTool,fetchTokenDetailsTool,fetchTokenPriceInUsdTool,fecthTokenAddressTool]);
    
 
       const account=privateKeyToAccount(
@@ -119,6 +122,7 @@ import { privateKeyToAccount } from "viem/accounts";
             apiKeyPrivateKey: process.env.CDP_API_KEY_PRIVATE_KEY!.replace(/\\n/g, "\n"),
           }),
         ],
+        
       });
 
       const tools = await getLangChainTools(agentkit);
